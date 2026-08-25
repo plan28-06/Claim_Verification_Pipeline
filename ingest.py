@@ -49,7 +49,7 @@ def clean_text(raw_text: str) -> str:
     return text.strip()
 
 
-def chunk_text(text: str, min_words: int = 40, max_words: int = 300) -> list[str]:
+def chunk_text(text: str, min_words: int = 40, max_words: int = 150) -> list[str]:
     """Step 3: Split cleaned text into paragraph-sized chunks."""
 
     # Primary split: on paragraph breaks
