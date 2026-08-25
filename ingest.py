@@ -2,6 +2,9 @@ import fitz
 import re
 
 
+pdf_path = "sample_cited_paper.pdf"
+
+
 def extract_text_from_pdf(pdf_path: str) -> str:
     """Step 1: Pull raw text out of every page of the PDF."""
     doc = fitz.open(pdf_path)
@@ -98,7 +101,6 @@ def ingest_pdf(pdf_path: str) -> list[str]:
 
 if __name__ == "__main__":
     # Quick test — point this at a real cited paper PDF
-    pdf_path = "sample_cited_paper.pdf"
     chunks = ingest_pdf(pdf_path)
 
     print(f"Extracted {len(chunks)} chunks.\n")
