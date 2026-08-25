@@ -3,9 +3,9 @@ from verify import verify_claim
 
 
 # ---- Set these before running ----
-PDF_PATH = r".pdf"
+PDF_PATH = r"D:\College\Internship\Papers\2006-Carturan-Strengthening of soda-lime silica glass by surface tereatement with sol-gel silica.pdf"
 CLAIMS = [
-    "The alloy shows a yield strength of 450 MPa after annealing.",
+    "Sol–gel silica surface coating significantly strengthens soda-lime-silica glass by reducing the effective length of surface cracks, with a greater strengthening effect in ion-exchanged glass..",
 ]
 # -----------------------------------
 

@@ -2,8 +2,6 @@ import fitz
 import re
 
 
-
-
 def extract_text_from_pdf(pdf_path: str) -> str:
     """Step 1: Pull raw text out of every page of the PDF."""
     doc = fitz.open(pdf_path)
