@@ -58,16 +58,3 @@ def retrieve_top_chunks(
     return ranked[:top_k]
 
 
-if __name__ == "__main__":
-    pdf_path = "sample_cited_paper.pdf"
-    chunks = ingest_pdf(pdf_path)
-
-    claim = "The alloy shows a yield strength of 450 MPa after annealing."
-
-    top_chunks = retrieve_top_chunks(claim, chunks, top_k=5)
-
-    print(f"Claim: {claim}\n")
-    print(f"Top {len(top_chunks)} retrieved chunks:\n")
-    for i, (chunk, score) in enumerate(top_chunks):
-        print(f"--- Rank {i+1} (score={score:.3f}) ---")
-        print(chunk[:300], "...\n")

@@ -2,7 +2,6 @@ import fitz
 import re
 
 
-pdf_path = "sample_cited_paper.pdf"
 
 
 def extract_text_from_pdf(pdf_path: str) -> str:
@@ -99,11 +98,3 @@ def ingest_pdf(pdf_path: str) -> list[str]:
     return chunks
 
 
-if __name__ == "__main__":
-    # Quick test — point this at a real cited paper PDF
-    chunks = ingest_pdf(pdf_path)
-
-    print(f"Extracted {len(chunks)} chunks.\n")
-    for i, chunk in enumerate(chunks[:5]):
-        print(f"--- Chunk {i} ({len(chunk.split())} words) ---")
-        print(chunk[:300], "...\n")

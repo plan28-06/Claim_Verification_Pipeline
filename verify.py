@@ -67,17 +67,3 @@ def verify_claim(claim: str, chunks: list[str], top_k: int = 5) -> dict:
     }
 
 
-if __name__ == "__main__":
-    pdf_path = "sample_cited_paper.pdf"
-    chunks = ingest_pdf(pdf_path)
-
-    claim = "The alloy shows a yield strength of 450 MPa after annealing."
-
-    result = verify_claim(claim, chunks, top_k=5)
-
-    print(f"Claim: {result['claim']}")
-    print(f"Verdict: {result['verdict']}\n")
-
-    print("Evidence:")
-    for item in result["evidence"]:
-        print(f"- [{item['label']} ({item['confidence']:.2f})] {item['chunk'][:200]}...")
