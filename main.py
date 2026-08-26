@@ -10,7 +10,7 @@ CLAIMS = [
     "The sol–gel coating process was performed using a spin-coating technique."
 
 ]
-# -----------------------------------
+
 
 
 def print_result(result: dict):
