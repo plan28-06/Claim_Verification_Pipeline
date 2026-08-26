@@ -51,10 +51,10 @@ def retrieve_top_chunks(
     sem_scores = _normalize(semantic_scores(claim, chunks))
     lex_scores = _normalize(bm25_scores(claim, chunks))
 
-    combined = semantic_weight * sem_scores + (1 - semantic_weight) * lex_scores
+    relevance_score = semantic_weight * sem_scores + (1 - semantic_weight) * lex_scores
 
     # Pair chunks with scores, sort descending, take top-k
-    ranked = sorted(zip(chunks, combined), key=lambda pair: pair[1], reverse=True)
+    ranked = sorted(zip(chunks, relevance_score), key=lambda pair: pair[1], reverse=True)
     return ranked[:top_k]
 
 

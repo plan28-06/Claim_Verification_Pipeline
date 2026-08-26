@@ -74,9 +74,6 @@ def print_result(result: dict, llm_result: dict, final_verdict: str):
         f"NLI Support Score: {result['support_score']:.4f}\n"
         f"NLI Contradiction Score: {result['contradiction_score']:.4f}\n"
         f"NLI Neutral Score: {result['neutral_score']:.4f}\n"
-        f"Highest Individual Class: {best_item['label'].upper()} "
-        f"(prob={best_item['probability']:.2f}, "
-        f"relevance={best_item['retrieval_score']:.2f})"
     )
 
     # This is the aggregated NLI verdict
@@ -93,7 +90,7 @@ def print_result(result: dict, llm_result: dict, final_verdict: str):
     )
 
     print("\n" + "-" * 60)
-    
+
 
 # ------------------------------------------------------------
 # Main
