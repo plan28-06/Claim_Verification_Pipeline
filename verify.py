@@ -5,15 +5,12 @@ from ingest import ingest_pdf
 from retrieve import retrieve_top_chunks
 
 
-# Load once — reused across calls
 _nli_model = CrossEncoder("cross-encoder/nli-distilroberta-base")
-
-# This model's label order — check the model card if you swap models later
 LABELS = ["contradiction", "entailment", "neutral"]
 
 
 def _softmax(logits: np.ndarray) -> np.ndarray:
-    exp = np.exp(logits - np.max(logits))  # subtract max for numerical stability
+    exp = np.exp(logits - np.max(logits))
     return exp / exp.sum()
 
 
@@ -27,43 +24,73 @@ def classify_chunk(chunk: str, claim: str) -> dict:
 
     return {
         "chunk": chunk,
-        "label": predicted_label,
-        "confidence": float(label_probs[predicted_label]),
-        "all_probs": {k: float(v) for k, v in label_probs.items()},
+        "label": predicted_label,                     # still tracked, for display/debugging
+        "probability": float(label_probs[predicted_label]),  # still tracked, for display/debugging
+        "all_probs": {k: float(v) for k, v in label_probs.items()},  # now actually used downstream
     }
 
 
-def aggregate_verdict(classified_chunks: list[dict], threshold: float = 0.6) -> str:
-    """Combine per-chunk NLI labels into one final verdict."""
+def aggregate_verdict(
+    classified_chunks: list[dict],
+    retrieval_scores: list[float],
+    min_total_weight: float = 0.5,
+) -> str:
+    """
+    Weighted-voting aggregation, full-split version:
+    each chunk contributes to ALL THREE label buckets,
+    weighted by (that label's probability * chunk relevance).
+    The label with the highest total weight wins,
+    as long as it clears min_total_weight.
+    """
+    weighted_totals = {"contradiction": 0.0, "entailment": 0.0, "neutral": 0.0}
 
-    # A single strong contradiction overrides everything else
-    for result in classified_chunks:
-        if result["label"] == "contradiction" and result["confidence"] >= threshold:
-            return "CONTRADICTED"
+    for result, relevance in zip(classified_chunks, retrieval_scores):
+        for label in LABELS:
+            label_prob = result["all_probs"][label]
+            weighted_totals[label] += label_prob * relevance
 
-    # Otherwise, any strong support wins
-    for result in classified_chunks:
-        if result["label"] == "entailment" and result["confidence"] >= threshold:
-            return "SUPPORTED"
+    top_label = max(weighted_totals, key=weighted_totals.get)
+    top_weight = weighted_totals[top_label]
 
-    return "NOT ENOUGH EVIDENCE"
+    if top_label == "neutral" or top_weight < min_total_weight:
+        return "NOT ENOUGH EVIDENCE"
+    elif top_label == "contradiction":
+        return "CONTRADICTED"
+    else:
+        return "SUPPORTED"
 
 
 def verify_claim(claim: str, chunks: list[str], top_k: int = 5) -> dict:
     """Full Stage 3 pipeline: claim + all chunks -> verdict + evidence."""
 
     top_chunks = retrieve_top_chunks(claim, chunks, top_k=top_k)
+    retrieval_scores = [score for _chunk, score in top_chunks]
 
     classified = [
-        classify_chunk(chunk, claim) for chunk, _retrieval_score in top_chunks
+        classify_chunk(chunk, claim) for chunk, _score in top_chunks
     ]
 
-    verdict = aggregate_verdict(classified)
+    verdict = aggregate_verdict(classified, retrieval_scores)
 
     return {
         "claim": claim,
         "verdict": verdict,
         "evidence": classified,
+        "retrieval_scores": retrieval_scores,
     }
 
 
+if __name__ == "__main__":
+    pdf_path = "sample_cited_paper.pdf"
+    chunks = ingest_pdf(pdf_path)
+
+    claim = "The alloy shows a yield strength of 450 MPa after annealing."
+
+    result = verify_claim(claim, chunks, top_k=5)
+
+    print(f"Claim: {result['claim']}")
+    print(f"Verdict: {result['verdict']}\n")
+
+    print("Evidence:")
+    for item, score in zip(result["evidence"], result["retrieval_scores"]):
+        print(f"- [{item['label']} (prob={item['probability']:.2f}), relevance={score:.2f}] {item['chunk'][:200]}...")
