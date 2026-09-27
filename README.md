@@ -1,4 +1,4 @@
-# Scientific_Claim_Verification_Pipeline using NLI + RAG
+# Claim_Verification_Pipeline using NLI + RAG
 
 A hybrid **scientific claim verification system** that verifies claims against research papers using **Natural Language Inference (NLI)** and **Retrieval-Augmented Generation (RAG)**.
 
