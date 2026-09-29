@@ -3,6 +3,8 @@ from sentence_transformers import SentenceTransformer
 from rank_bm25 import BM25Okapi
 
 
+### Used solely for the retrieve top sentences function here
+
 # ============================================================
 # Frozen Retrieval Configuration
 # ============================================================

@@ -8,8 +8,7 @@ import requests
 
 OLLAMA_URL = "http://localhost:11434/api/chat"
 
-MODEL_NAME = "llama3.1:8b"
-
+MODEL_NAME = "qwen3:8b"
 
 # ============================================================
 # LLM PROMPT
