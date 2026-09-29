@@ -2,10 +2,11 @@ import sys
 from pathlib import Path
 
 # Allow imports from project root
-ROOT_DIR = Path(__file__).resolve().parent.parent
+ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(ROOT_DIR))
 
-from verify import (
+
+from paper_pipeline.verify import (
     classify_chunk,
     aggregate_nli_evidence,
 )
