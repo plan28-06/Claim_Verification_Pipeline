@@ -3,7 +3,7 @@ import re
 from pathlib import Path
 
 BASE_DIR = Path(__file__).parent
-SCIFACT_FILE = BASE_DIR.parent / "scifact" / "scifact_pristine.jsonl"
+SCIFACT_FILE = BASE_DIR.parent / "scifact" / "scifact_train_pristine.jsonl"
 CLINIFACT_FILE = BASE_DIR.parent / "clinifact" / "clinifact_pristine.jsonl"
 
 SCIFACT_OUTPUT = BASE_DIR / "normalized_scifact.jsonl"
