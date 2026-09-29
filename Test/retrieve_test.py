@@ -3,12 +3,20 @@ from sentence_transformers import SentenceTransformer
 from rank_bm25 import BM25Okapi
 
 
-# Load once
+# ============================================================
+# Frozen Retrieval Configuration
+# ============================================================
+
+SEMANTIC_WEIGHT = 0.9
+BM25_WEIGHT = 0.1
+
+# Load embedding model once
 _embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
 
 
 def _normalize(scores: np.ndarray) -> np.ndarray:
     """Min-max normalize scores to [0, 1]."""
+
     min_val = scores.min()
     max_val = scores.max()
 
@@ -18,7 +26,10 @@ def _normalize(scores: np.ndarray) -> np.ndarray:
     return (scores - min_val) / (max_val - min_val)
 
 
-def semantic_scores(claim: str, sentences: list[str]) -> np.ndarray:
+def semantic_scores(
+    claim: str,
+    sentences: list[str]
+) -> np.ndarray:
     """Compute semantic similarity between claim and each sentence."""
 
     claim_vec = _embedding_model.encode(
@@ -34,7 +45,10 @@ def semantic_scores(claim: str, sentences: list[str]) -> np.ndarray:
     return sentence_vecs @ claim_vec
 
 
-def bm25_scores(claim: str, sentences: list[str]) -> np.ndarray:
+def bm25_scores(
+    claim: str,
+    sentences: list[str]
+) -> np.ndarray:
     """Compute BM25 lexical relevance scores."""
 
     tokenized_sentences = [
@@ -55,11 +69,10 @@ def retrieve_top_sentences(
     claim: str,
     sentences: list[str],
     top_k: int = 5,
-    semantic_weight: float = 0.5,
 ) -> list[tuple[int, str, float]]:
     """
-    Retrieve top-k sentences using hybrid
-    semantic + BM25 retrieval.
+    Retrieve top-k sentences using the frozen
+    0.9 semantic + 0.1 BM25 hybrid retriever.
 
     Returns:
         (sentence_index, sentence, relevance_score)
@@ -74,8 +87,8 @@ def retrieve_top_sentences(
     )
 
     relevance_scores = (
-        semantic_weight * sem_scores
-        + (1 - semantic_weight) * bm25_scores_array
+        SEMANTIC_WEIGHT * sem_scores
+        + BM25_WEIGHT * bm25_scores_array
     )
 
     ranked_indices = np.argsort(

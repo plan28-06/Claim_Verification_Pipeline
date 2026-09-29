@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 
 from Test.llama.retrieve_test_ollama import retrieve_top_sentences
-from Test.llama.verify_test_llama import verify_claim_test
+from Test.llama.verify_test import verify_claim_test
 from llm_verify_test_ollama import verify_claim_with_llm_test
 
 # ============================================================

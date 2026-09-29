@@ -28,7 +28,7 @@ sys.path.insert(
     str(TEST_DIR)
 )
 
-from llama.retrieve_test_llama import (
+from Test.retrieve_test import (
     retrieve_top_sentences
 )
 

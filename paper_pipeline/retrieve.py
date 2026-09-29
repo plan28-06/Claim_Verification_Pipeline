@@ -44,7 +44,7 @@ def retrieve_top_chunks(
     claim: str,
     chunks: list[str],
     top_k: int = 5,
-    semantic_weight: float = 0.5,
+    semantic_weight: float = 0.9,
 ) -> list[tuple[str, float]]:
     """Full Stage 2 pipeline: claim + chunks -> top-k (chunk, score) pairs."""
 
