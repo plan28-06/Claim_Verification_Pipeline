@@ -15,7 +15,7 @@ RESULTS_DIR = TEST_DIR / "results"
 
 OUTPUT_FILE = (
     RESULTS_DIR
-    / "llama_results.json"
+    / "qwen_results.json"
 )
 
 # ============================================================
@@ -29,13 +29,13 @@ sys.path.insert(
 
 from nli_verify import verify_claim_test
 
-from llama.llm_verify_test_llama import (
-    verify_claim_with_llm as verify_llama
-)
-
-# from qwen.llm_verify_test_qwen import (
-#     verify_claim_with_llm as verify_qwen
+# from llama.llm_verify_test_llama import (
+#     verify_claim_with_llm as verify_llama
 # )
+
+from qwen.llm_verify_test_qwen import (
+    verify_claim_with_llm as verify_qwen
+)
 
 # from mistral.llm_verify_test_mistral import (
 #     verify_claim_with_llm as verify_mistral
@@ -54,7 +54,7 @@ from llama.llm_verify_test_llama import (
 # Change to None after the 5-record test succeeds.
 # ------------------------------------------------------------
 
-LIMIT = 5
+LIMIT = None
 
 
 # ============================================================
@@ -326,35 +326,35 @@ def main():
         # 2. Llama 3.1 8B
         # ====================================================
 
-        print(
-            "  [2/7] Running Llama 3.1 8B..."
-        )
-
-        llama_result = verify_llama(
-            claim,
-            retrieved_evidence
-        )
-
-        print(
-            f"        → {llama_result['verdict']}"
-        )
-
-        # ====================================================
-        # 3. Qwen3 8B
-        # ====================================================
-
         # print(
-        #     "  [3/7] Running Qwen3 8B..."
+        #     "  [2/7] Running Llama 3.1 8B..."
         # )
 
-        # qwen_result = verify_qwen(
+        # llama_result = verify_llama(
         #     claim,
         #     retrieved_evidence
         # )
 
         # print(
-        #     f"        → {qwen_result['verdict']}"
+        #     f"        → {llama_result['verdict']}"
         # )
+
+        # ====================================================
+        # 3. Qwen3 8B
+        # ====================================================
+
+        print(
+            "  [3/7] Running Qwen3 8B..."
+        )
+
+        qwen_result = verify_qwen(
+            claim,
+            retrieved_evidence
+        )
+
+        print(
+            f"        → {qwen_result['verdict']}"
+        )
 
         # ====================================================
         # 4. Mistral 7B
@@ -377,35 +377,35 @@ def main():
         # 5. DeBERTa + Llama
         # ====================================================
 
-        print(
-            "  [5/7] Computing DeBERTa + Llama hybrid..."
-        )
+        # print(
+        #     "  [5/7] Computing DeBERTa + Llama hybrid..."
+        # )
 
-        hybrid_llama = combine_hybrid(
-            nli_result["verdict"],
-            llama_result["verdict"]
-        )
+        # hybrid_llama = combine_hybrid(
+        #     nli_result["verdict"],
+        #     llama_result["verdict"]
+        # )
 
-        print(
-            f"        → {hybrid_llama['verdict']}"
-        )
+        # print(
+        #     f"        → {hybrid_llama['verdict']}"
+        # )
 
         # ====================================================
         # 6. DeBERTa + Qwen
         # ====================================================
 
-        # print(
-        #     "  [6/7] Computing DeBERTa + Qwen hybrid..."
-        # )
+        print(
+            "  [6/7] Computing DeBERTa + Qwen hybrid..."
+        )
 
-        # hybrid_qwen = combine_hybrid(
-        #     nli_result["verdict"],
-        #     qwen_result["verdict"]
-        # )
+        hybrid_qwen = combine_hybrid(
+            nli_result["verdict"],
+            qwen_result["verdict"]
+        )
 
-        # print(
-        #     f"        → {hybrid_qwen['verdict']}"
-        # )
+        print(
+            f"        → {hybrid_qwen['verdict']}"
+        )
 
         # ====================================================
         # 7. DeBERTa + Mistral
@@ -448,9 +448,9 @@ def main():
 
             "nli": nli_result,
 
-            "llama": llama_result,
+            # "llama": llama_result,
 
-            # "qwen": qwen_result,
+            "qwen": qwen_result,
 
             # "mistral": mistral_result,
 
@@ -460,11 +460,11 @@ def main():
 
             "hybrid": {
 
-                "llama":
-                    hybrid_llama
+                # "llama":
+                #     hybrid_llama
 
-                # "qwen":
-                #     hybrid_qwen,
+                "qwen":
+                    hybrid_qwen
 
                 # "mistral":
                 #     hybrid_mistral
