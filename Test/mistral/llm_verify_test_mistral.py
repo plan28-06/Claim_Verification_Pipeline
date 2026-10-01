@@ -1,4 +1,6 @@
 import json
+import re
+import time
 import requests
 
 
@@ -60,76 +62,43 @@ Return ONLY valid JSON in exactly this format:
 # ============================================================
 
 def call_llm(prompt: str) -> dict:
-    """Send claim + retrieved evidence to Ollama."""
-
+    """Call Mistral and retry until a valid verdict is returned."""
     payload = {
         "model": MODEL_NAME,
-
         "messages": [
-            {
-                "role": "system",
-                "content": SYSTEM_PROMPT
-            },
-            {
-                "role": "user",
-                "content": prompt
-            }
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user", "content": prompt}
         ],
-
         "stream": False,
-
-        "options": {
-            "temperature": 0
-        }
+        "options": {"temperature": 0}
     }
-
-    response = requests.post(
-        OLLAMA_URL,
-        json=payload,
-        timeout=120
-    )
-
-    response.raise_for_status()
-
-    data = response.json()
-
-    content = data["message"]["content"].strip()
-
-    # --------------------------------------------------------
-    # Remove markdown code fences if the model adds them
-    # --------------------------------------------------------
-
-    if content.startswith("```"):
-        content = content.replace("```json", "")
-        content = content.replace("```", "")
-        content = content.strip()
-
-    # --------------------------------------------------------
-    # Parse JSON
-    # --------------------------------------------------------
-
-    result = json.loads(content)
-
-    # --------------------------------------------------------
-    # Validate verdict
-    # --------------------------------------------------------
-
-    valid_verdicts = {
-        "SUPPORTED",
-        "CONTRADICTED",
-        "NOT ENOUGH EVIDENCE"
-    }
-
-    verdict = result.get("verdict")
-
-    if verdict not in valid_verdicts:
-        raise ValueError(
-            f"Invalid LLM verdict: {verdict}"
-        )
-
-    return {
-        "verdict": verdict
-    }
+    valid_verdicts = {"SUPPORTED", "CONTRADICTED", "NOT ENOUGH EVIDENCE"}
+    attempt = 0
+    while True:
+        attempt += 1
+        try:
+            response = requests.post(OLLAMA_URL, json=payload, timeout=300)
+            response.raise_for_status()
+            data = response.json()
+            content = data["message"]["content"].strip()
+            content = content.replace("```json", "").replace("```", "").strip()
+            try:
+                result = json.loads(content)
+            except json.JSONDecodeError:
+                match = re.search(r'"verdict"\s*:\s*"(SUPPORTED|CONTRADICTED|NOT ENOUGH EVIDENCE)"', content, re.I)
+                if not match:
+                    raise ValueError(f"Could not extract a valid verdict: {content[:500]}")
+                result = {"verdict": match.group(1).upper()}
+            verdict = result.get("verdict")
+            if isinstance(verdict, str):
+                verdict = verdict.strip().upper()
+            if verdict not in valid_verdicts:
+                raise ValueError(f"Invalid Mistral verdict: {verdict}")
+            return {"verdict": verdict}
+        except (requests.RequestException, json.JSONDecodeError, KeyError, TypeError, ValueError) as e:
+            print(f"        Mistral attempt {attempt} failed: {type(e).__name__}: {e}", flush=True)
+            print("        Retrying in 5 seconds...", flush=True)
+            time.sleep(5)
 
 
 # ============================================================

@@ -17,7 +17,7 @@ RESULTS_DIR = TEST_DIR / "results"
 
 OUTPUT_FILE = (
     RESULTS_DIR
-    / "llama_results.json"
+    / "mistral_results.json"
 )
 
 # ============================================================
@@ -31,17 +31,17 @@ sys.path.insert(
 
 from nli_verify import verify_claim_test
 
-from llama.llm_verify_test_llama import (
-    verify_claim_with_llm as verify_llama
-)
+# from llama.llm_verify_test_llama import (
+#     verify_claim_with_llm as verify_llama
+# )
 
 # from qwen.llm_verify_test_qwen import (
 #     verify_claim_with_llm as verify_qwen
 # )
 
-# from mistral.llm_verify_test_mistral import (
-#     verify_claim_with_llm as verify_mistral
-# )
+from mistral.llm_verify_test_mistral import (
+    verify_claim_with_llm as verify_mistral
+)
 
 
 # ============================================================
@@ -129,7 +129,7 @@ def save_results(results):
 
     The new JSON is first written to a temporary file in the same
     directory. Only after the write succeeds is it replaced over
-    llama_results.json.
+    mistral_results.json.
 
     This prevents an interruption during writing from destroying
     the previous valid checkpoint.
@@ -148,7 +148,7 @@ def save_results(results):
             mode="w",
             encoding="utf-8",
             dir=RESULTS_DIR,
-            prefix="llama_results_",
+            prefix="mistral_results_",
             suffix=".tmp",
             delete=False
         ) as f:
@@ -429,18 +429,18 @@ def main():
         # 2. Llama 3.1 8B
         # ====================================================
 
-        print(
-            "  [2/7] Running Llama 3.1 8B..."
-        )
+        # print(
+        #     "  [2/7] Running Llama 3.1 8B..."
+        # )
 
-        llama_result = verify_llama(
-            claim,
-            retrieved_evidence
-        )
+        # llama_result = verify_llama(
+        #     claim,
+        #     retrieved_evidence
+        # )
 
-        print(
-            f"        → {llama_result['verdict']}"
-        )
+        # print(
+        #     f"        → {llama_result['verdict']}"
+        # )
 
         # ====================================================
         # 3. Qwen3 8B
@@ -463,35 +463,35 @@ def main():
         # 4. Mistral 7B
         # ====================================================
 
-        # print(
-        #     "  [4/7] Running Mistral 7B..."
-        # )
+        print(
+            "  [4/7] Running Mistral 7B..."
+        )
 
-        # mistral_result = verify_mistral(
-        #     claim,
-        #     retrieved_evidence
-        # )
+        mistral_result = verify_mistral(
+            claim,
+            retrieved_evidence
+        )
 
-        # print(
-        #     f"        → {mistral_result['verdict']}"
-        # )
+        print(
+            f"        → {mistral_result['verdict']}"
+        )
 
         # ====================================================
         # 5. DeBERTa + Llama
         # ====================================================
 
-        print(
-            "  [5/7] Computing DeBERTa + Llama hybrid..."
-        )
+        # print(
+        #     "  [5/7] Computing DeBERTa + Llama hybrid..."
+        # )
 
-        hybrid_llama = combine_hybrid(
-            nli_result["verdict"],
-            llama_result["verdict"]
-        )
+        # hybrid_llama = combine_hybrid(
+        #     nli_result["verdict"],
+        #     llama_result["verdict"]
+        # )
 
-        print(
-            f"        → {hybrid_llama['verdict']}"
-        )
+        # print(
+        #     f"        → {hybrid_llama['verdict']}"
+        # )
 
         # ====================================================
         # 6. DeBERTa + Qwen
@@ -514,18 +514,18 @@ def main():
         # 7. DeBERTa + Mistral
         # ====================================================
 
-        # print(
-        #     "  [7/7] Computing DeBERTa + Mistral hybrid..."
-        # )
+        print(
+            "  [7/7] Computing DeBERTa + Mistral hybrid..."
+        )
 
-        # hybrid_mistral = combine_hybrid(
-        #     nli_result["verdict"],
-        #     mistral_result["verdict"]
-        # )
+        hybrid_mistral = combine_hybrid(
+            nli_result["verdict"],
+            mistral_result["verdict"]
+        )
 
-        # print(
-        #     f"        → {hybrid_mistral['verdict']}"
-        # )
+        print(
+            f"        → {hybrid_mistral['verdict']}"
+        )
 
         # ====================================================
         # SAVE RESULT
@@ -551,11 +551,11 @@ def main():
 
             "nli": nli_result,
 
-            "llama": llama_result,
+            # "llama": llama_result,
 
             # "qwen": qwen_result,
 
-            # "mistral": mistral_result,
+            "mistral": mistral_result,
 
             # ------------------------------------------------
             # Hybrid systems
@@ -563,14 +563,14 @@ def main():
 
             "hybrid": {
 
-                "llama":
-                    hybrid_llama
+                # "llama":
+                #     hybrid_llama,
 
                 # "qwen":
-                #     hybrid_qwen
+                #     hybrid_qwen,
 
-                # "mistral":
-                #     hybrid_mistral
+                "mistral":
+                    hybrid_mistral
             }
         }
 
