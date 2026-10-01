@@ -1,0 +1,154 @@
+{
+    "num_records": 2035,
+    "systems": {
+        "deberta_nli": {
+            "accuracy": 0.37444717444717446,
+            "macro_precision": 0.46445619126234994,
+            "macro_recall": 0.5366674097547012,
+            "macro_f1": 0.31571211767912993,
+            "per_class": {
+                "SUPPORTED": {
+                    "precision": 0.5560882070949185,
+                    "recall": 0.675990675990676,
+                    "f1": 0.6102051551814834,
+                    "support": 858
+                },
+                "CONTRADICTED": {
+                    "precision": 0.1461038961038961,
+                    "recall": 0.8881578947368421,
+                    "f1": 0.25092936802973975,
+                    "support": 152
+                },
+                "NOT ENOUGH EVIDENCE": {
+                    "precision": 0.6911764705882353,
+                    "recall": 0.045853658536585365,
+                    "f1": 0.08600182982616651,
+                    "support": 1025
+                }
+            },
+            "confusion_matrix": [
+                [
+                    580,
+                    258,
+                    20
+                ],
+                [
+                    16,
+                    135,
+                    1
+                ],
+                [
+                    447,
+                    531,
+                    47
+                ]
+            ]
+        },
+        "mistral_7b": {
+            "accuracy": 0.7714987714987716,
+            "macro_precision": 0.6523415824397466,
+            "macro_recall": 0.6318991285422608,
+            "macro_f1": 0.6388159420796645,
+            "per_class": {
+                "SUPPORTED": {
+                    "precision": 0.7497348886532343,
+                    "recall": 0.824009324009324,
+                    "f1": 0.7851193781232648,
+                    "support": 858
+                },
+                "CONTRADICTED": {
+                    "precision": 0.36936936936936937,
+                    "recall": 0.26973684210526316,
+                    "f1": 0.311787072243346,
+                    "support": 152
+                },
+                "NOT ENOUGH EVIDENCE": {
+                    "precision": 0.8379204892966361,
+                    "recall": 0.8019512195121952,
+                    "f1": 0.8195413758723828,
+                    "support": 1025
+                }
+            },
+            "confusion_matrix": [
+                [
+                    707,
+                    46,
+                    105
+                ],
+                [
+                    57,
+                    41,
+                    54
+                ],
+                [
+                    179,
+                    24,
+                    822
+                ]
+            ]
+        },
+        "nli_plus_mistral": {
+            "accuracy": 0.7218673218673218,
+            "macro_precision": 0.6490413070216038,
+            "macro_recall": 0.5823732635927757,
+            "macro_f1": 0.5991422736124,
+            "per_class": {
+                "SUPPORTED": {
+                    "precision": 0.8172043010752689,
+                    "recall": 0.62004662004662,
+                    "f1": 0.7051027170311465,
+                    "support": 858
+                },
+                "CONTRADICTED": {
+                    "precision": 0.4367816091954023,
+                    "recall": 0.25,
+                    "f1": 0.3179916317991632,
+                    "support": 152
+                },
+                "NOT ENOUGH EVIDENCE": {
+                    "precision": 0.6931380107941403,
+                    "recall": 0.8770731707317073,
+                    "f1": 0.7743324720068906,
+                    "support": 1025
+                }
+            },
+            "confusion_matrix": [
+                [
+                    532,
+                    33,
+                    293
+                ],
+                [
+                    9,
+                    38,
+                    105
+                ],
+                [
+                    110,
+                    16,
+                    899
+                ]
+            ]
+        }
+    },
+    "hybrid_agreement": {
+        "agreement": 780,
+        "disagreement": 1255,
+        "agreement_percentage": 0.3832923832923833,
+        "disagreement_percentage": 0.6167076167076168
+    },
+    "gold_label_distribution": {
+        "SUPPORTED": {
+            "count": 858,
+            "percentage": 0.42162162162162165
+        },
+        "CONTRADICTED": {
+            "count": 152,
+            "percentage": 0.0746928746928747
+        },
+        "NOT ENOUGH EVIDENCE": {
+            "count": 1025,
+            "percentage": 0.5036855036855037
+        }
+    }
+}
