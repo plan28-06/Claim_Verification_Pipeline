@@ -1,4 +1,4 @@
-# Claim_Verification_Pipeline using NLI + RAG
+# Claim_Verification_Pipeline
 
 A hybrid retrieval based **scientific claim verification system** that verifies claims against research papers using **Natural Language Inference (NLI)** and **Open-source LLMs**.
 
