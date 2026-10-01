@@ -1,6 +1,6 @@
 # Claim_Verification_Pipeline using NLI + RAG
 
-A hybrid **scientific claim verification system** that verifies claims against research papers using **Natural Language Inference (NLI)** and **Retrieval-Augmented Generation (RAG)**.
+A hybrid retrieval based **scientific claim verification system** that verifies claims against research papers using **Natural Language Inference (NLI)** and **Open-source LLMs**.
 
 The system retrieves the most relevant evidence from a research paper, independently verifies the claim using a DeBERTa NLI model and a local LLM, and combines both predictions into a final verdict.
 
