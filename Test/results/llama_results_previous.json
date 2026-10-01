@@ -1,0 +1,3037 @@
+[
+  {
+    "id": "scifact_2_13734012",
+    "source": "SciFact",
+    "claim": "1 in 5 million in UK have abnormal PrP positivity.",
+    "gold_label": "CONTRADICTED",
+    "retrieved_evidence": [
+      {
+        "sentence_index": 4,
+        "sentence": "RESULTS Of the 32,441 appendix samples 16 were positive for abnormal PrP, indicating an overall prevalence of 493 per million population (95% confidence interval 282 to 801 per million).",
+        "relevance_score": 0.9809550020882853
+      },
+      {
+        "sentence_index": 7,
+        "sentence": "CONCLUSIONS This study corroborates previous studies and suggests a high prevalence of infection with abnormal PrP, indicating vCJD carrier status in the population compared with the 177 vCJD cases to date.",
+        "relevance_score": 0.7294452981907027
+      },
+      {
+        "sentence_index": 5,
+        "sentence": "The prevalence in those born in 1941-60 (733 per million, 269 to 1596 per million) did not differ significantly from those born between 1961 and 1985 (412 per million, 198 to 758 per million) and was similar in both sexes and across the three broad geographical areas sampled.",
+        "relevance_score": 0.5750492169755962
+      },
+      {
+        "sentence_index": 3,
+        "sentence": "SAMPLE 32,441 archived appendix samples fixed in formalin and embedded in paraffin and tested for the presence of abnormal prion protein (PrP).   \n",
+        "relevance_score": 0.4819138068732844
+      },
+      {
+        "sentence_index": 2,
+        "sentence": "SETTING Archived appendix samples from the pathology departments of 41 UK hospitals participating in the earlier survey, and additional hospitals in regions with lower levels of participation in that survey.   ",
+        "relevance_score": 0.4030569553375244
+      }
+    ],
+    "nli": {
+      "claim": "1 in 5 million in UK have abnormal PrP positivity.",
+      "verdict": "CONTRADICTED",
+      "support_score": 0.015547735465192178,
+      "contradiction_score": 0.02159865561068682,
+      "neutral_score": 3.1334873888886507,
+      "support_ratio": 0.004903668018501371,
+      "contradiction_ratio": 0.006812094082631153,
+      "neutral_ratio": 0.9882842378988674,
+      "support_vs_contradiction": 0.4185530549504201,
+      "contradiction_vs_support": 0.5814469450495798,
+      "evidence": [
+        {
+          "chunk": "RESULTS Of the 32,441 appendix samples 16 were positive for abnormal PrP, indicating an overall prevalence of 493 per million population (95% confidence interval 282 to 801 per million).",
+          "label": "neutral",
+          "probability": 0.98291015625,
+          "all_probs": {
+            "entailment": 0.0096893310546875,
+            "neutral": 0.98291015625,
+            "contradiction": 0.0076141357421875
+          },
+          "retrieval_score": 0.9809550020882853
+        },
+        {
+          "chunk": "CONCLUSIONS This study corroborates previous studies and suggests a high prevalence of infection with abnormal PrP, indicating vCJD carrier status in the population compared with the 177 vCJD cases to date.",
+          "label": "neutral",
+          "probability": 0.986328125,
+          "all_probs": {
+            "entailment": 0.0038700103759765625,
+            "neutral": 0.986328125,
+            "contradiction": 0.009765625
+          },
+          "retrieval_score": 0.7294452981907027
+        },
+        {
+          "chunk": "The prevalence in those born in 1941-60 (733 per million, 269 to 1596 per million) did not differ significantly from those born between 1961 and 1985 (412 per million, 198 to 758 per million) and was similar in both sexes and across the three broad geographical areas sampled.",
+          "label": "neutral",
+          "probability": 0.9921875,
+          "all_probs": {
+            "entailment": 0.002597808837890625,
+            "neutral": 0.9921875,
+            "contradiction": 0.005157470703125
+          },
+          "retrieval_score": 0.5750492169755962
+        },
+        {
+          "chunk": "SAMPLE 32,441 archived appendix samples fixed in formalin and embedded in paraffin and tested for the presence of abnormal prion protein (PrP).   \n",
+          "label": "neutral",
+          "probability": 0.99755859375,
+          "all_probs": {
+            "entailment": 0.0007071495056152344,
+            "neutral": 0.99755859375,
+            "contradiction": 0.0019006729125976562
+          },
+          "retrieval_score": 0.4819138068732844
+        },
+        {
+          "chunk": "SETTING Archived appendix samples from the pathology departments of 41 UK hospitals participating in the earlier survey, and additional hospitals in regions with lower levels of participation in that survey.   ",
+          "label": "neutral",
+          "probability": 0.98876953125,
+          "all_probs": {
+            "entailment": 0.003437042236328125,
+            "neutral": 0.98876953125,
+            "contradiction": 0.00775146484375
+          },
+          "retrieval_score": 0.4030569553375244
+        }
+      ]
+    },
+    "llama": {
+      "verdict": "SUPPORTED"
+    },
+    "hybrid": {
+      "llama": {
+        "verdict": "NOT ENOUGH EVIDENCE",
+        "agreement": false,
+        "nli_verdict": "CONTRADICTED",
+        "llm_verdict": "SUPPORTED"
+      }
+    }
+  },
+  {
+    "id": "scifact_9_44265107",
+    "source": "SciFact",
+    "claim": "32% of liver transplantation programs required patients to discontinue methadone treatment in 2001.",
+    "gold_label": "SUPPORTED",
+    "retrieved_evidence": [
+      {
+        "sentence_index": 11,
+        "sentence": "Approximately 180 patients receiving methadone maintenance are reported to have undergone liver transplantation.",
+        "relevance_score": 0.9844401819012316
+      },
+      {
+        "sentence_index": 3,
+        "sentence": "ObjectiveTo identify addiction-related criteria for admission to the UNOS liver transplantation waiting list and posttransplantation problems experienced by patients who are prescribed maintenance methadone.",
+        "relevance_score": 0.8403276101656947
+      },
+      {
+        "sentence_index": 15,
+        "sentence": "Policies requiring discontinuation of methadone in 32% of all programs contradict the evidence base for efficacy of long-term replacement therapies and potentially result in relapse of previously stable patients.",
+        "relevance_score": 0.7950936913490295
+      },
+      {
+        "sentence_index": 10,
+        "sentence": "Patients receiving methadone maintenance are accepted by 56% of the responding programs.",
+        "relevance_score": 0.7694592670355761
+      },
+      {
+        "sentence_index": 12,
+        "sentence": "ConclusionsMost liver transplantation programs have established policies for patients with substance use disorders.",
+        "relevance_score": 0.7536889240825306
+      }
+    ],
+    "nli": {
+      "claim": "32% of liver transplantation programs required patients to discontinue methadone treatment in 2001.",
+      "verdict": "CONTRADICTED",
+      "support_score": 0.0031026985000098158,
+      "contradiction_score": 0.022510547601862423,
+      "neutral_score": 4.117259223838633,
+      "support_ratio": 0.0007489244533888279,
+      "contradiction_ratio": 0.005433560353400329,
+      "neutral_ratio": 0.9938175151932109,
+      "support_vs_contradiction": 0.12113648100945,
+      "contradiction_vs_support": 0.87886351899055,
+      "evidence": [
+        {
+          "chunk": "Approximately 180 patients receiving methadone maintenance are reported to have undergone liver transplantation.",
+          "label": "neutral",
+          "probability": 0.99755859375,
+          "all_probs": {
+            "entailment": 0.0009984970092773438,
+            "neutral": 0.99755859375,
+            "contradiction": 0.0015993118286132812
+          },
+          "retrieval_score": 0.9844401819012316
+        },
+        {
+          "chunk": "ObjectiveTo identify addiction-related criteria for admission to the UNOS liver transplantation waiting list and posttransplantation problems experienced by patients who are prescribed maintenance methadone.",
+          "label": "neutral",
+          "probability": 0.9990234375,
+          "all_probs": {
+            "entailment": 0.0003056526184082031,
+            "neutral": 0.9990234375,
+            "contradiction": 0.000667572021484375
+          },
+          "retrieval_score": 0.8403276101656947
+        },
+        {
+          "chunk": "Policies requiring discontinuation of methadone in 32% of all programs contradict the evidence base for efficacy of long-term replacement therapies and potentially result in relapse of previously stable patients.",
+          "label": "neutral",
+          "probability": 0.99853515625,
+          "all_probs": {
+            "entailment": 0.0005197525024414062,
+            "neutral": 0.99853515625,
+            "contradiction": 0.0009412765502929688
+          },
+          "retrieval_score": 0.7950936913490295
+        },
+        {
+          "chunk": "Patients receiving methadone maintenance are accepted by 56% of the responding programs.",
+          "label": "neutral",
+          "probability": 0.9755859375,
+          "all_probs": {
+            "entailment": 0.0011768341064453125,
+            "neutral": 0.9755859375,
+            "contradiction": 0.0230560302734375
+          },
+          "retrieval_score": 0.7694592670355761
+        },
+        {
+          "chunk": "ConclusionsMost liver transplantation programs have established policies for patients with substance use disorders.",
+          "label": "neutral",
+          "probability": 0.99658203125,
+          "all_probs": {
+            "entailment": 0.0007219314575195312,
+            "neutral": 0.99658203125,
+            "contradiction": 0.00250244140625
+          },
+          "retrieval_score": 0.7536889240825306
+        }
+      ]
+    },
+    "llama": {
+      "verdict": "SUPPORTED"
+    },
+    "hybrid": {
+      "llama": {
+        "verdict": "NOT ENOUGH EVIDENCE",
+        "agreement": false,
+        "nli_verdict": "CONTRADICTED",
+        "llm_verdict": "SUPPORTED"
+      }
+    }
+  },
+  {
+    "id": "scifact_12_33409100",
+    "source": "SciFact",
+    "claim": "40mg/day dosage of folic acid and 2mg/day dosage of vitamin B12 does not affect chronic kidney disease (CKD) progression.",
+    "gold_label": "SUPPORTED",
+    "retrieved_evidence": [
+      {
+        "sentence_index": 2,
+        "sentence": "OBJECTIVE To determine whether high doses of folic acid and B vitamins administered daily reduce mortality in patients with chronic kidney disease.   \n",
+        "relevance_score": 0.9664481064194634
+      },
+      {
+        "sentence_index": 12,
+        "sentence": "CONCLUSION Treatment with high doses of folic acid and B vitamins did not improve survival or reduce the incidence of vascular disease in patients with advanced chronic kidney disease or end-stage renal disease.   \n",
+        "relevance_score": 0.9545706272125244
+      },
+      {
+        "sentence_index": 1,
+        "sentence": "Folic acid and B vitamins decrease homocysteine levels in this population but whether they lower mortality is unknown.   \n",
+        "relevance_score": 0.7123185845420179
+      },
+      {
+        "sentence_index": 5,
+        "sentence": "INTERVENTION Participants received a daily capsule containing 40 mg of folic acid, 100 mg of pyridoxine hydrochloride (vitamin B6), and 2 mg of cyanocobalamin (vitamin B12) or a placebo.   \n",
+        "relevance_score": 0.6775548139972873
+      },
+      {
+        "sentence_index": 0,
+        "sentence": "CONTEXT High plasma homocysteine levels are a risk factor for mortality and vascular disease in observational studies of patients with chronic kidney disease.",
+        "relevance_score": 0.6549338993265299
+      }
+    ],
+    "nli": {
+      "claim": "40mg/day dosage of folic acid and 2mg/day dosage of vitamin B12 does not affect chronic kidney disease (CKD) progression.",
+      "verdict": "CONTRADICTED",
+      "support_score": 0.030575458637375857,
+      "contradiction_score": 0.25339948026629694,
+      "neutral_score": 3.68198609272612,
+      "support_ratio": 0.007709470262951883,
+      "contradiction_ratio": 0.0638935880220093,
+      "neutral_ratio": 0.9283969417150388,
+      "support_vs_contradiction": 0.10766956674211087,
+      "contradiction_vs_support": 0.8923304332578891,
+      "evidence": [
+        {
+          "chunk": "OBJECTIVE To determine whether high doses of folic acid and B vitamins administered daily reduce mortality in patients with chronic kidney disease.   \n",
+          "label": "neutral",
+          "probability": 0.95654296875,
+          "all_probs": {
+            "entailment": 0.0027713775634765625,
+            "neutral": 0.95654296875,
+            "contradiction": 0.040618896484375
+          },
+          "retrieval_score": 0.9664481064194634
+        },
+        {
+          "chunk": "CONCLUSION Treatment with high doses of folic acid and B vitamins did not improve survival or reduce the incidence of vascular disease in patients with advanced chronic kidney disease or end-stage renal disease.   \n",
+          "label": "neutral",
+          "probability": 0.9755859375,
+          "all_probs": {
+            "entailment": 0.0236053466796875,
+            "neutral": 0.9755859375,
+            "contradiction": 0.0008339881896972656
+          },
+          "retrieval_score": 0.9545706272125244
+        },
+        {
+          "chunk": "Folic acid and B vitamins decrease homocysteine levels in this population but whether they lower mortality is unknown.   \n",
+          "label": "neutral",
+          "probability": 0.93798828125,
+          "all_probs": {
+            "entailment": 0.00244140625,
+            "neutral": 0.93798828125,
+            "contradiction": 0.05950927734375
+          },
+          "retrieval_score": 0.7123185845420179
+        },
+        {
+          "chunk": "INTERVENTION Participants received a daily capsule containing 40 mg of folic acid, 100 mg of pyridoxine hydrochloride (vitamin B6), and 2 mg of cyanocobalamin (vitamin B12) or a placebo.   \n",
+          "label": "neutral",
+          "probability": 0.99658203125,
+          "all_probs": {
+            "entailment": 0.0018177032470703125,
+            "neutral": 0.99658203125,
+            "contradiction": 0.0016946792602539062
+          },
+          "retrieval_score": 0.6775548139972873
+        },
+        {
+          "chunk": "CONTEXT High plasma homocysteine levels are a risk factor for mortality and vascular disease in observational studies of patients with chronic kidney disease.",
+          "label": "neutral",
+          "probability": 0.7373046875,
+          "all_probs": {
+            "entailment": 0.00365447998046875,
+            "neutral": 0.7373046875,
+            "contradiction": 0.25927734375
+          },
+          "retrieval_score": 0.6549338993265299
+        }
+      ]
+    },
+    "llama": {
+      "verdict": "SUPPORTED"
+    },
+    "hybrid": {
+      "llama": {
+        "verdict": "NOT ENOUGH EVIDENCE",
+        "agreement": false,
+        "nli_verdict": "CONTRADICTED",
+        "llm_verdict": "SUPPORTED"
+      }
+    }
+  },
+  {
+    "id": "scifact_22_6490571",
+    "source": "SciFact",
+    "claim": "76-85% of people with severe mental disorder receive no treatment in low and middle income countries.",
+    "gold_label": "SUPPORTED",
+    "retrieved_evidence": [
+      {
+        "sentence_index": 7,
+        "sentence": "Although disorder severity was correlated with probability of treatment in almost all countries, 35.5% to 50.3% of serious cases in developed countries and 76.3% to 85.4% in less-developed countries received no treatment in the 12 months before the interview.",
+        "relevance_score": 0.9999999761581421
+      },
+      {
+        "sentence_index": 0,
+        "sentence": "CONTEXT Little is known about the extent or severity of untreated mental disorders, especially in less-developed countries.   \n",
+        "relevance_score": 0.9072996412490719
+      },
+      {
+        "sentence_index": 1,
+        "sentence": "OBJECTIVE To estimate prevalence, severity, and treatment of Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (DSM-IV) mental disorders in 14 countries (6 less developed, 8 developed) in the World Health Organization (WHO) World Mental Health (WMH) Survey Initiative.   \n",
+        "relevance_score": 0.7693710699759967
+      },
+      {
+        "sentence_index": 9,
+        "sentence": "CONCLUSIONS Reallocation of treatment resources could substantially decrease the problem of unmet need for treatment of mental disorders among serious cases.",
+        "relevance_score": 0.753574011990739
+      },
+      {
+        "sentence_index": 8,
+        "sentence": "Due to the high prevalence of mild and subthreshold cases, the number of those who received treatment far exceeds the number of untreated serious cases in every country.   \n",
+        "relevance_score": 0.604639866807183
+      }
+    ],
+    "nli": {
+      "claim": "76-85% of people with severe mental disorder receive no treatment in low and middle income countries.",
+      "verdict": "SUPPORTED",
+      "support_score": 0.10281016686911354,
+      "contradiction_score": 0.010195447104914986,
+      "neutral_score": 3.9222227908498857,
+      "support_ratio": 0.025478153044870798,
+      "contradiction_ratio": 0.002526609669164412,
+      "neutral_ratio": 0.9719952372859648,
+      "support_vs_contradiction": 0.9097792866533325,
+      "contradiction_vs_support": 0.09022071334666745,
+      "evidence": [
+        {
+          "chunk": "Although disorder severity was correlated with probability of treatment in almost all countries, 35.5% to 50.3% of serious cases in developed countries and 76.3% to 85.4% in less-developed countries received no treatment in the 12 months before the interview.",
+          "label": "neutral",
+          "probability": 0.8994140625,
+          "all_probs": {
+            "entailment": 0.0968017578125,
+            "neutral": 0.8994140625,
+            "contradiction": 0.0038738250732421875
+          },
+          "retrieval_score": 0.9999999761581421
+        },
+        {
+          "chunk": "CONTEXT Little is known about the extent or severity of untreated mental disorders, especially in less-developed countries.   \n",
+          "label": "neutral",
+          "probability": 0.99755859375,
+          "all_probs": {
+            "entailment": 0.0013980865478515625,
+            "neutral": 0.99755859375,
+            "contradiction": 0.001277923583984375
+          },
+          "retrieval_score": 0.9072996412490719
+        },
+        {
+          "chunk": "OBJECTIVE To estimate prevalence, severity, and treatment of Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (DSM-IV) mental disorders in 14 countries (6 less developed, 8 developed) in the World Health Organization (WHO) World Mental Health (WMH) Survey Initiative.   \n",
+          "label": "neutral",
+          "probability": 0.99658203125,
+          "all_probs": {
+            "entailment": 0.0020542144775390625,
+            "neutral": 0.99658203125,
+            "contradiction": 0.0014181137084960938
+          },
+          "retrieval_score": 0.7693710699759967
+        },
+        {
+          "chunk": "CONCLUSIONS Reallocation of treatment resources could substantially decrease the problem of unmet need for treatment of mental disorders among serious cases.",
+          "label": "neutral",
+          "probability": 0.9990234375,
+          "all_probs": {
+            "entailment": 0.0008196830749511719,
+            "neutral": 0.9990234375,
+            "contradiction": 0.00029397010803222656
+          },
+          "retrieval_score": 0.753574011990739
+        },
+        {
+          "chunk": "Due to the high prevalence of mild and subthreshold cases, the number of those who received treatment far exceeds the number of untreated serious cases in every country.   \n",
+          "label": "neutral",
+          "probability": 0.9892578125,
+          "all_probs": {
+            "entailment": 0.00420379638671875,
+            "neutral": 0.9892578125,
+            "contradiction": 0.006366729736328125
+          },
+          "retrieval_score": 0.604639866807183
+        }
+      ]
+    },
+    "llama": {
+      "verdict": "SUPPORTED"
+    },
+    "hybrid": {
+      "llama": {
+        "verdict": "SUPPORTED",
+        "agreement": true,
+        "nli_verdict": "SUPPORTED",
+        "llm_verdict": "SUPPORTED"
+      }
+    }
+  },
+  {
+    "id": "scifact_28_12670680",
+    "source": "SciFact",
+    "claim": "A T helper 2 cell (Th2) environment impedes disease development in patients with systemic lupus erythematosus (SLE).",
+    "gold_label": "CONTRADICTED",
+    "retrieved_evidence": [
+      {
+        "sentence_index": 1,
+        "sentence": "We report that activation of basophils by autoreactive IgE causes their homing to lymph nodes, promoting T helper type 2 (T(H)2) cell differentiation and enhancing the production of self-reactive antibodies that cause lupus-like nephritis in mice lacking the Src family protein tyrosine kinase Lyn (Lyn(-/-) mice).",
+        "relevance_score": 0.9999999761581421
+      },
+      {
+        "sentence_index": 0,
+        "sentence": "In systemic lupus erythematosus (SLE), self-reactive antibodies can target the kidney (lupus nephritis), leading to functional failure and possible mortality.",
+        "relevance_score": 0.8831299601795592
+      },
+      {
+        "sentence_index": 2,
+        "sentence": "Individuals with SLE also have elevated serum IgE, self-reactive IgEs and activated basophils that express CD62 ligand (CD62L) and the major histocompatibility complex (MHC) class II molecule human leukocyte antigen-DR (HLA-DR), parameters that are associated with increased disease activity and active lupus nephritis.",
+        "relevance_score": 0.8209410101745731
+      },
+      {
+        "sentence_index": 4,
+        "sentence": "Thus, in Lyn(-/-) mice, basophils and IgE autoantibodies amplify autoantibody production that leads to lupus nephritis, and in individuals with SLE IgE autoantibodies and activated basophils are factors associated with disease activity and nephritis.",
+        "relevance_score": 0.5751422109017712
+      },
+      {
+        "sentence_index": 3,
+        "sentence": "Basophils were also present in the lymph nodes and spleen of subjects with SLE.",
+        "relevance_score": 0.0
+      }
+    ],
+    "nli": {
+      "claim": "A T helper 2 cell (Th2) environment impedes disease development in patients with systemic lupus erythematosus (SLE).",
+      "verdict": "CONTRADICTED",
+      "support_score": 0.0787608922508716,
+      "contradiction_score": 1.5340642113914367,
+      "neutral_score": 1.6664067231051332,
+      "support_ratio": 0.02401809216672304,
+      "contradiction_ratio": 0.46781206466668834,
+      "neutral_ratio": 0.5081698431665886,
+      "support_vs_contradiction": 0.04883411851229417,
+      "contradiction_vs_support": 0.9511658814877059,
+      "evidence": [
+        {
+          "chunk": "We report that activation of basophils by autoreactive IgE causes their homing to lymph nodes, promoting T helper type 2 (T(H)2) cell differentiation and enhancing the production of self-reactive antibodies that cause lupus-like nephritis in mice lacking the Src family protein tyrosine kinase Lyn (Lyn(-/-) mice).",
+          "label": "contradiction",
+          "probability": 0.5126953125,
+          "all_probs": {
+            "entailment": 0.035675048828125,
+            "neutral": 0.45166015625,
+            "contradiction": 0.5126953125
+          },
+          "retrieval_score": 0.9999999761581421
+        },
+        {
+          "chunk": "In systemic lupus erythematosus (SLE), self-reactive antibodies can target the kidney (lupus nephritis), leading to functional failure and possible mortality.",
+          "label": "neutral",
+          "probability": 0.7880859375,
+          "all_probs": {
+            "entailment": 0.0223541259765625,
+            "neutral": 0.7880859375,
+            "contradiction": 0.189453125
+          },
+          "retrieval_score": 0.8831299601795592
+        },
+        {
+          "chunk": "Individuals with SLE also have elevated serum IgE, self-reactive IgEs and activated basophils that express CD62 ligand (CD62L) and the major histocompatibility complex (MHC) class II molecule human leukocyte antigen-DR (HLA-DR), parameters that are associated with increased disease activity and active lupus nephritis.",
+          "label": "contradiction",
+          "probability": 0.9736328125,
+          "all_probs": {
+            "entailment": 0.0029506683349609375,
+            "neutral": 0.023345947265625,
+            "contradiction": 0.9736328125
+          },
+          "retrieval_score": 0.8209410101745731
+        },
+        {
+          "chunk": "Thus, in Lyn(-/-) mice, basophils and IgE autoantibodies amplify autoantibody production that leads to lupus nephritis, and in individuals with SLE IgE autoantibodies and activated basophils are factors associated with disease activity and nephritis.",
+          "label": "neutral",
+          "probability": 0.86865234375,
+          "all_probs": {
+            "entailment": 0.036376953125,
+            "neutral": 0.86865234375,
+            "contradiction": 0.09521484375
+          },
+          "retrieval_score": 0.5751422109017712
+        },
+        {
+          "chunk": "Basophils were also present in the lymph nodes and spleen of subjects with SLE.",
+          "label": "neutral",
+          "probability": 0.8798828125,
+          "all_probs": {
+            "entailment": 0.0906982421875,
+            "neutral": 0.8798828125,
+            "contradiction": 0.02935791015625
+          },
+          "retrieval_score": 0.0
+        }
+      ]
+    },
+    "llama": {
+      "verdict": "NOT ENOUGH EVIDENCE"
+    },
+    "hybrid": {
+      "llama": {
+        "verdict": "NOT ENOUGH EVIDENCE",
+        "agreement": false,
+        "nli_verdict": "CONTRADICTED",
+        "llm_verdict": "NOT ENOUGH EVIDENCE"
+      }
+    }
+  },
+  {
+    "id": "scifact_30_24341590",
+    "source": "SciFact",
+    "claim": "A breast cancer patient's capacity to metabolize tamoxifen influences treatment outcome.",
+    "gold_label": "SUPPORTED",
+    "retrieved_evidence": [
+      {
+        "sentence_index": 3,
+        "sentence": "DESIGN, SETTING, AND PATIENTS Retrospective analysis of German and US cohorts of patients treated with adjuvant tamoxifen for early stage breast cancer.",
+        "relevance_score": 0.9834712528472176
+      },
+      {
+        "sentence_index": 0,
+        "sentence": "CONTEXT The growth inhibitory effect of tamoxifen, which is used for the treatment of hormone receptor-positive breast cancer, is mediated by its metabolites, 4-hydroxytamoxifen and endoxifen.",
+        "relevance_score": 0.9550732339099749
+      },
+      {
+        "sentence_index": 13,
+        "sentence": "CONCLUSION Among women with breast cancer treated with tamoxifen, there was an association between CYP2D6 variation and clinical outcomes, such that the presence of 2 functional CYP2D6 alleles was associated with better clinical outcomes and the presence of nonfunctional or reduced-function alleles with worse outcomes.",
+        "relevance_score": 0.8033321169845569
+      },
+      {
+        "sentence_index": 2,
+        "sentence": "OBJECTIVE To determine whether CYP2D6 variation is associated with clinical outcomes in women receiving adjuvant tamoxifen.   \n",
+        "relevance_score": 0.7721778948466229
+      },
+      {
+        "sentence_index": 4,
+        "sentence": "The 1325 patients had diagnoses between 1986 and 2005 of stage I through III breast cancer and were mainly postmenopausal (95.4%).",
+        "relevance_score": 0.67550729640183
+      }
+    ],
+    "nli": {
+      "claim": "A breast cancer patient's capacity to metabolize tamoxifen influences treatment outcome.",
+      "verdict": "SUPPORTED",
+      "support_score": 2.1613382808722195,
+      "contradiction_score": 0.026654236961527192,
+      "neutral_score": 2.0018848705676158,
+      "support_ratio": 0.5158476204710308,
+      "contradiction_ratio": 0.006361579227906012,
+      "neutral_ratio": 0.4777908003010633,
+      "support_vs_contradiction": 0.9878179487615815,
+      "contradiction_vs_support": 0.012182051238418586,
+      "evidence": [
+        {
+          "chunk": "DESIGN, SETTING, AND PATIENTS Retrospective analysis of German and US cohorts of patients treated with adjuvant tamoxifen for early stage breast cancer.",
+          "label": "neutral",
+          "probability": 0.9326171875,
+          "all_probs": {
+            "entailment": 0.05926513671875,
+            "neutral": 0.9326171875,
+            "contradiction": 0.0080718994140625
+          },
+          "retrieval_score": 0.9834712528472176
+        },
+        {
+          "chunk": "CONTEXT The growth inhibitory effect of tamoxifen, which is used for the treatment of hormone receptor-positive breast cancer, is mediated by its metabolites, 4-hydroxytamoxifen and endoxifen.",
+          "label": "entailment",
+          "probability": 0.6552734375,
+          "all_probs": {
+            "entailment": 0.6552734375,
+            "neutral": 0.33154296875,
+            "contradiction": 0.01348876953125
+          },
+          "retrieval_score": 0.9550732339099749
+        },
+        {
+          "chunk": "CONCLUSION Among women with breast cancer treated with tamoxifen, there was an association between CYP2D6 variation and clinical outcomes, such that the presence of 2 functional CYP2D6 alleles was associated with better clinical outcomes and the presence of nonfunctional or reduced-function alleles with worse outcomes.",
+          "label": "entailment",
+          "probability": 0.9912109375,
+          "all_probs": {
+            "entailment": 0.9912109375,
+            "neutral": 0.007049560546875,
+            "contradiction": 0.0015897750854492188
+          },
+          "retrieval_score": 0.8033321169845569
+        },
+        {
+          "chunk": "OBJECTIVE To determine whether CYP2D6 variation is associated with clinical outcomes in women receiving adjuvant tamoxifen.   \n",
+          "label": "entailment",
+          "probability": 0.86181640625,
+          "all_probs": {
+            "entailment": 0.86181640625,
+            "neutral": 0.1351318359375,
+            "contradiction": 0.0032253265380859375
+          },
+          "retrieval_score": 0.7721778948466229
+        },
+        {
+          "chunk": "The 1325 patients had diagnoses between 1986 and 2005 of stage I through III breast cancer and were mainly postmenopausal (95.4%).",
+          "label": "neutral",
+          "probability": 0.97412109375,
+          "all_probs": {
+            "entailment": 0.0229034423828125,
+            "neutral": 0.97412109375,
+            "contradiction": 0.0030574798583984375
+          },
+          "retrieval_score": 0.67550729640183
+        }
+      ]
+    },
+    "llama": {
+      "verdict": "SUPPORTED"
+    },
+    "hybrid": {
+      "llama": {
+        "verdict": "SUPPORTED",
+        "agreement": true,
+        "nli_verdict": "SUPPORTED",
+        "llm_verdict": "SUPPORTED"
+      }
+    }
+  },
+  {
+    "id": "scifact_32_12428497",
+    "source": "SciFact",
+    "claim": "A country's Vaccine Alliance (GAVI) eligibility is not indictivate of accelerated adoption of the Hub vaccine.",
+    "gold_label": "CONTRADICTED",
+    "retrieved_evidence": [
+      {
+        "sentence_index": 8,
+        "sentence": "CONCLUSIONS This study substantiates previous findings related to vaccine price and presents new evidence to suggest that GAVI eligibility is associated with accelerated decisions to adopt Hib vaccine.",
+        "relevance_score": 0.9999999761581421
+      },
+      {
+        "sentence_index": 2,
+        "sentence": "Using the case of Haemophilus influenzae type b (Hib) vaccine, this paper endeavors to explain these delays through the analysis of country-level economic, epidemiological, programmatic and policy-related factors, as well as the role of the Global Alliance for Vaccines and Immunisation (GAVI Alliance).   \n",
+        "relevance_score": 0.713988228134866
+      },
+      {
+        "sentence_index": 1,
+        "sentence": "Policy decisions to adopt new vaccines in high mortality countries often lag behind decisions in high-income countries.",
+        "relevance_score": 0.5485037565231323
+      },
+      {
+        "sentence_index": 0,
+        "sentence": "BACKGROUND Adoption of new and underutilized vaccines by national immunization programs is an essential step towards reducing child mortality.",
+        "relevance_score": 0.5133676051916186
+      },
+      {
+        "sentence_index": 9,
+        "sentence": "The influence of neighboring country decisions was also highly significant, suggesting that approaches to support the adoption of new vaccines should consider supply- and demand-side factors.",
+        "relevance_score": 0.46681047071632664
+      }
+    ],
+    "nli": {
+      "claim": "A country's Vaccine Alliance (GAVI) eligibility is not indictivate of accelerated adoption of the Hub vaccine.",
+      "verdict": "CONTRADICTED",
+      "support_score": 0.05856278898818039,
+      "contradiction_score": 2.1912784018602207,
+      "neutral_score": 0.9928773268195819,
+      "support_ratio": 0.018059781837091463,
+      "contradiction_ratio": 0.6757535043270081,
+      "neutral_ratio": 0.3061867138359004,
+      "support_vs_contradiction": 0.026029743444290272,
+      "contradiction_vs_support": 0.9739702565557098,
+      "evidence": [
+        {
+          "chunk": "CONCLUSIONS This study substantiates previous findings related to vaccine price and presents new evidence to suggest that GAVI eligibility is associated with accelerated decisions to adopt Hib vaccine.",
+          "label": "contradiction",
+          "probability": 0.9921875,
+          "all_probs": {
+            "entailment": 0.0011129379272460938,
+            "neutral": 0.006511688232421875,
+            "contradiction": 0.9921875
+          },
+          "retrieval_score": 0.9999999761581421
+        },
+        {
+          "chunk": "Using the case of Haemophilus influenzae type b (Hib) vaccine, this paper endeavors to explain these delays through the analysis of country-level economic, epidemiological, programmatic and policy-related factors, as well as the role of the Global Alliance for Vaccines and Immunisation (GAVI Alliance).   \n",
+          "label": "contradiction",
+          "probability": 0.861328125,
+          "all_probs": {
+            "entailment": 0.0357666015625,
+            "neutral": 0.10302734375,
+            "contradiction": 0.861328125
+          },
+          "retrieval_score": 0.713988228134866
+        },
+        {
+          "chunk": "Policy decisions to adopt new vaccines in high mortality countries often lag behind decisions in high-income countries.",
+          "label": "neutral",
+          "probability": 0.8623046875,
+          "all_probs": {
+            "entailment": 0.032135009765625,
+            "neutral": 0.8623046875,
+            "contradiction": 0.10577392578125
+          },
+          "retrieval_score": 0.5485037565231323
+        },
+        {
+          "chunk": "BACKGROUND Adoption of new and underutilized vaccines by national immunization programs is an essential step towards reducing child mortality.",
+          "label": "neutral",
+          "probability": 0.78759765625,
+          "all_probs": {
+            "entailment": 0.0212249755859375,
+            "neutral": 0.78759765625,
+            "contradiction": 0.19140625
+          },
+          "retrieval_score": 0.5133676051916186
+        },
+        {
+          "chunk": "The influence of neighboring country decisions was also highly significant, suggesting that approaches to support the adoption of new vaccines should consider supply- and demand-side factors.",
+          "label": "contradiction",
+          "probability": 0.91650390625,
+          "all_probs": {
+            "entailment": 0.00726318359375,
+            "neutral": 0.0760498046875,
+            "contradiction": 0.91650390625
+          },
+          "retrieval_score": 0.46681047071632664
+        }
+      ]
+    },
+    "llama": {
+      "verdict": "CONTRADICTED"
+    },
+    "hybrid": {
+      "llama": {
+        "verdict": "CONTRADICTED",
+        "agreement": true,
+        "nli_verdict": "CONTRADICTED",
+        "llm_verdict": "CONTRADICTED"
+      }
+    }
+  },
+  {
+    "id": "scifact_34_11705328",
+    "source": "SciFact",
+    "claim": "A deficiency of folate increases blood levels of homocysteine.",
+    "gold_label": "SUPPORTED",
+    "retrieved_evidence": [
+      {
+        "sentence_index": 8,
+        "sentence": "CONCLUSIONS A dosage of folic acid of 0.8 mg/d appears necessary to achieve the maximum reduction in serum homocysteine level across the range of homocysteine levels in the population.",
+        "relevance_score": 0.940180561721311
+      },
+      {
+        "sentence_index": 4,
+        "sentence": "RESULTS Median serum homocysteine level decreased with increasing folic acid dosage, to a maximum at 0.8 mg of folic acid per day, when the homocysteine reduction (placebo adjusted) was 2.7 micromol/L (23%), similar to the known effect of folic acid dosages of 1 mg/d and above.",
+        "relevance_score": 0.8585906924771987
+      },
+      {
+        "sentence_index": 0,
+        "sentence": "BACKGROUND Lowering serum homocysteine levels with folic acid is expected to reduce mortality from ischemic heart disease.",
+        "relevance_score": 0.8171952714924572
+      },
+      {
+        "sentence_index": 3,
+        "sentence": "Fasting blood samples for serum homocysteine and serum folate analysis were taken initially, after 3 months of supplementation, and 3 months after folic acid use was discontinued.   \n",
+        "relevance_score": 0.7871458292007446
+      },
+      {
+        "sentence_index": 5,
+        "sentence": "The higher a person's initial serum homocysteine level, the greater was the response to folic acid, but there were statistically significant reductions regardless of the initial level.",
+        "relevance_score": 0.782609224319458
+      }
+    ],
+    "nli": {
+      "claim": "A deficiency of folate increases blood levels of homocysteine.",
+      "verdict": "SUPPORTED",
+      "support_score": 0.7258909654698149,
+      "contradiction_score": 0.047191839556630234,
+      "neutral_score": 3.412990896037971,
+      "support_ratio": 0.17340615987846528,
+      "contradiction_ratio": 0.011273532891843378,
+      "neutral_ratio": 0.8153203072296915,
+      "support_vs_contradiction": 0.9389562938797793,
+      "contradiction_vs_support": 0.06104370612022075,
+      "evidence": [
+        {
+          "chunk": "CONCLUSIONS A dosage of folic acid of 0.8 mg/d appears necessary to achieve the maximum reduction in serum homocysteine level across the range of homocysteine levels in the population.",
+          "label": "neutral",
+          "probability": 0.71533203125,
+          "all_probs": {
+            "entailment": 0.2724609375,
+            "neutral": 0.71533203125,
+            "contradiction": 0.01226806640625
+          },
+          "retrieval_score": 0.940180561721311
+        },
+        {
+          "chunk": "RESULTS Median serum homocysteine level decreased with increasing folic acid dosage, to a maximum at 0.8 mg of folic acid per day, when the homocysteine reduction (placebo adjusted) was 2.7 micromol/L (23%), similar to the known effect of folic acid dosages of 1 mg/d and above.",
+          "label": "neutral",
+          "probability": 0.970703125,
+          "all_probs": {
+            "entailment": 0.021240234375,
+            "neutral": 0.970703125,
+            "contradiction": 0.00799560546875
+          },
+          "retrieval_score": 0.8585906924771987
+        },
+        {
+          "chunk": "BACKGROUND Lowering serum homocysteine levels with folic acid is expected to reduce mortality from ischemic heart disease.",
+          "label": "neutral",
+          "probability": 0.7841796875,
+          "all_probs": {
+            "entailment": 0.2078857421875,
+            "neutral": 0.7841796875,
+            "contradiction": 0.00812530517578125
+          },
+          "retrieval_score": 0.8171952714924572
+        },
+        {
+          "chunk": "Fasting blood samples for serum homocysteine and serum folate analysis were taken initially, after 3 months of supplementation, and 3 months after folic acid use was discontinued.   \n",
+          "label": "neutral",
+          "probability": 0.712890625,
+          "all_probs": {
+            "entailment": 0.279052734375,
+            "neutral": 0.712890625,
+            "contradiction": 0.0081024169921875
+          },
+          "retrieval_score": 0.7871458292007446
+        },
+        {
+          "chunk": "The higher a person's initial serum homocysteine level, the greater was the response to folic acid, but there were statistically significant reductions regardless of the initial level.",
+          "label": "neutral",
+          "probability": 0.90087890625,
+          "all_probs": {
+            "entailment": 0.07916259765625,
+            "neutral": 0.90087890625,
+            "contradiction": 0.0201568603515625
+          },
+          "retrieval_score": 0.782609224319458
+        }
+      ]
+    },
+    "llama": {
+      "verdict": "SUPPORTED"
+    },
+    "hybrid": {
+      "llama": {
+        "verdict": "SUPPORTED",
+        "agreement": true,
+        "nli_verdict": "SUPPORTED",
+        "llm_verdict": "SUPPORTED"
+      }
+    }
+  },
+  {
+    "id": "scifact_39_13497630",
+    "source": "SciFact",
+    "claim": "A diminished ovarian reserve does not solely indicate infertility in an a priori non-infertile population.",
+    "gold_label": "SUPPORTED",
+    "retrieved_evidence": [
+      {
+        "sentence_index": 11,
+        "sentence": "Conclusions and Relevance Among women aged 30 to 44 years without a history of infertility who had been trying to conceive for 3 months or less, biomarkers indicating diminished ovarian reserve compared with normal ovarian reserve were not associated with reduced fertility.",
+        "relevance_score": 0.9999999761581421
+      },
+      {
+        "sentence_index": 0,
+        "sentence": "Importance Despite lack of evidence of their utility, biomarkers of ovarian reserve are being promoted as potential markers of reproductive potential.",
+        "relevance_score": 0.7374094040693392
+      },
+      {
+        "sentence_index": 1,
+        "sentence": "Objective To determine the associations between biomarkers of ovarian reserve and reproductive potential among women of late reproductive age.",
+        "relevance_score": 0.7190347501406498
+      },
+      {
+        "sentence_index": 12,
+        "sentence": "These findings do not support the use of urinary or blood follicle-stimulating hormone tests or antimüllerian hormone levels to assess natural fertility for women with these characteristics.",
+        "relevance_score": 0.5402444408682154
+      },
+      {
+        "sentence_index": 2,
+        "sentence": "Design, Setting, and Participants Prospective time-to-pregnancy cohort study (2008 to date of last follow-up in March 2016) of women (N = 981) aged 30 to 44 years without a history of infertility who had been trying to conceive for 3 months or less, recruited from the community in the Raleigh-Durham, North Carolina, area.",
+        "relevance_score": 0.5318151224129437
+      }
+    ],
+    "nli": {
+      "claim": "A diminished ovarian reserve does not solely indicate infertility in an a priori non-infertile population.",
+      "verdict": "SUPPORTED",
+      "support_score": 3.037817407634222,
+      "contradiction_score": 0.017335889300484658,
+      "neutral_score": 0.47316567889553773,
+      "support_ratio": 0.8609815122850102,
+      "contradiction_ratio": 0.004913356592541458,
+      "neutral_ratio": 0.1341051311224484,
+      "support_vs_contradiction": 0.9943256892157006,
+      "contradiction_vs_support": 0.005674310784299461,
+      "evidence": [
+        {
+          "chunk": "Conclusions and Relevance Among women aged 30 to 44 years without a history of infertility who had been trying to conceive for 3 months or less, biomarkers indicating diminished ovarian reserve compared with normal ovarian reserve were not associated with reduced fertility.",
+          "label": "entailment",
+          "probability": 0.97705078125,
+          "all_probs": {
+            "entailment": 0.97705078125,
+            "neutral": 0.020477294921875,
+            "contradiction": 0.0023288726806640625
+          },
+          "retrieval_score": 0.9999999761581421
+        },
+        {
+          "chunk": "Importance Despite lack of evidence of their utility, biomarkers of ovarian reserve are being promoted as potential markers of reproductive potential.",
+          "label": "entailment",
+          "probability": 0.87451171875,
+          "all_probs": {
+            "entailment": 0.87451171875,
+            "neutral": 0.1180419921875,
+            "contradiction": 0.00736236572265625
+          },
+          "retrieval_score": 0.7374094040693392
+        },
+        {
+          "chunk": "Objective To determine the associations between biomarkers of ovarian reserve and reproductive potential among women of late reproductive age.",
+          "label": "entailment",
+          "probability": 0.56494140625,
+          "all_probs": {
+            "entailment": 0.56494140625,
+            "neutral": 0.42919921875,
+            "contradiction": 0.005771636962890625
+          },
+          "retrieval_score": 0.7190347501406498
+        },
+        {
+          "chunk": "These findings do not support the use of urinary or blood follicle-stimulating hormone tests or antimüllerian hormone levels to assess natural fertility for women with these characteristics.",
+          "label": "entailment",
+          "probability": 0.90087890625,
+          "all_probs": {
+            "entailment": 0.90087890625,
+            "neutral": 0.0908203125,
+            "contradiction": 0.0083160400390625
+          },
+          "retrieval_score": 0.5402444408682154
+        },
+        {
+          "chunk": "Design, Setting, and Participants Prospective time-to-pregnancy cohort study (2008 to date of last follow-up in March 2016) of women (N = 981) aged 30 to 44 years without a history of infertility who had been trying to conceive for 3 months or less, recruited from the community in the Raleigh-Durham, North Carolina, area.",
+          "label": "entailment",
+          "probability": 0.9833984375,
+          "all_probs": {
+            "entailment": 0.9833984375,
+            "neutral": 0.014984130859375,
+            "contradiction": 0.001758575439453125
+          },
+          "retrieval_score": 0.5318151224129437
+        }
+      ]
+    },
+    "llama": {
+      "verdict": "SUPPORTED"
+    },
+    "hybrid": {
+      "llama": {
+        "verdict": "SUPPORTED",
+        "agreement": true,
+        "nli_verdict": "SUPPORTED",
+        "llm_verdict": "SUPPORTED"
+      }
+    }
+  },
+  {
+    "id": "scifact_40_13497630",
+    "source": "SciFact",
+    "claim": "A diminished ovarian reserve is a very strong indicator of infertility, even in an a priori non-infertile population.",
+    "gold_label": "CONTRADICTED",
+    "retrieved_evidence": [
+      {
+        "sentence_index": 11,
+        "sentence": "Conclusions and Relevance Among women aged 30 to 44 years without a history of infertility who had been trying to conceive for 3 months or less, biomarkers indicating diminished ovarian reserve compared with normal ovarian reserve were not associated with reduced fertility.",
+        "relevance_score": 0.9999999761581421
+      },
+      {
+        "sentence_index": 0,
+        "sentence": "Importance Despite lack of evidence of their utility, biomarkers of ovarian reserve are being promoted as potential markers of reproductive potential.",
+        "relevance_score": 0.8312769815898392
+      },
+      {
+        "sentence_index": 1,
+        "sentence": "Objective To determine the associations between biomarkers of ovarian reserve and reproductive potential among women of late reproductive age.",
+        "relevance_score": 0.7736575904268856
+      },
+      {
+        "sentence_index": 2,
+        "sentence": "Design, Setting, and Participants Prospective time-to-pregnancy cohort study (2008 to date of last follow-up in March 2016) of women (N = 981) aged 30 to 44 years without a history of infertility who had been trying to conceive for 3 months or less, recruited from the community in the Raleigh-Durham, North Carolina, area.",
+        "relevance_score": 0.4673405218709856
+      },
+      {
+        "sentence_index": 12,
+        "sentence": "These findings do not support the use of urinary or blood follicle-stimulating hormone tests or antimüllerian hormone levels to assess natural fertility for women with these characteristics.",
+        "relevance_score": 0.4132872223854065
+      }
+    ],
+    "nli": {
+      "claim": "A diminished ovarian reserve is a very strong indicator of infertility, even in an a priori non-infertile population.",
+      "verdict": "CONTRADICTED",
+      "support_score": 0.22634346176011905,
+      "contradiction_score": 1.2437994606016118,
+      "neutral_score": 2.0152896491963785,
+      "support_ratio": 0.06493984810009842,
+      "contradiction_ratio": 0.35685655512354103,
+      "neutral_ratio": 0.5782035967763606,
+      "support_vs_contradiction": 0.15396017510767357,
+      "contradiction_vs_support": 0.8460398248923264,
+      "evidence": [
+        {
+          "chunk": "Conclusions and Relevance Among women aged 30 to 44 years without a history of infertility who had been trying to conceive for 3 months or less, biomarkers indicating diminished ovarian reserve compared with normal ovarian reserve were not associated with reduced fertility.",
+          "label": "contradiction",
+          "probability": 0.998046875,
+          "all_probs": {
+            "entailment": 0.00028252601623535156,
+            "neutral": 0.0017786026000976562,
+            "contradiction": 0.998046875
+          },
+          "retrieval_score": 0.9999999761581421
+        },
+        {
+          "chunk": "Importance Despite lack of evidence of their utility, biomarkers of ovarian reserve are being promoted as potential markers of reproductive potential.",
+          "label": "neutral",
+          "probability": 0.75537109375,
+          "all_probs": {
+            "entailment": 0.00592803955078125,
+            "neutral": 0.75537109375,
+            "contradiction": 0.238525390625
+          },
+          "retrieval_score": 0.8312769815898392
+        },
+        {
+          "chunk": "Objective To determine the associations between biomarkers of ovarian reserve and reproductive potential among women of late reproductive age.",
+          "label": "neutral",
+          "probability": 0.9814453125,
+          "all_probs": {
+            "entailment": 0.00873565673828125,
+            "neutral": 0.9814453125,
+            "contradiction": 0.0096435546875
+          },
+          "retrieval_score": 0.7736575904268856
+        },
+        {
+          "chunk": "Design, Setting, and Participants Prospective time-to-pregnancy cohort study (2008 to date of last follow-up in March 2016) of women (N = 981) aged 30 to 44 years without a history of infertility who had been trying to conceive for 3 months or less, recruited from the community in the Raleigh-Durham, North Carolina, area.",
+          "label": "neutral",
+          "probability": 0.55810546875,
+          "all_probs": {
+            "entailment": 0.43212890625,
+            "neutral": 0.55810546875,
+            "contradiction": 0.0099945068359375
+          },
+          "retrieval_score": 0.4673405218709856
+        },
+        {
+          "chunk": "These findings do not support the use of urinary or blood follicle-stimulating hormone tests or antimüllerian hormone levels to assess natural fertility for women with these characteristics.",
+          "label": "neutral",
+          "probability": 0.88427734375,
+          "all_probs": {
+            "entailment": 0.030059814453125,
+            "neutral": 0.88427734375,
+            "contradiction": 0.08551025390625
+          },
+          "retrieval_score": 0.4132872223854065
+        }
+      ]
+    },
+    "llama": {
+      "verdict": "NOT ENOUGH EVIDENCE"
+    },
+    "hybrid": {
+      "llama": {
+        "verdict": "NOT ENOUGH EVIDENCE",
+        "agreement": false,
+        "nli_verdict": "CONTRADICTED",
+        "llm_verdict": "NOT ENOUGH EVIDENCE"
+      }
+    }
+  },
+  {
+    "id": "scifact_41_18174210",
+    "source": "SciFact",
+    "claim": "A high microerythrocyte count protects against severe anemia in homozygous alpha (+)- thalassemia trait subjects.",
+    "gold_label": "SUPPORTED",
+    "retrieved_evidence": [
+      {
+        "sentence_index": 1,
+        "sentence": "Individuals homozygous for alpha(+)-thalassaemia have microcytosis and an increased erythrocyte count.",
+        "relevance_score": 0.9227824413530109
+      },
+      {
+        "sentence_index": 10,
+        "sentence": "CONCLUSIONS The increased erythrocyte count and microcytosis in children homozygous for alpha(+)-thalassaemia may contribute substantially to their protection against SMA.",
+        "relevance_score": 0.7953975869219985
+      },
+      {
+        "sentence_index": 7,
+        "sentence": "This model predicted that children homozygous for alpha(+)-thalassaemia lose less Hb than children of normal genotype for a reduction in erythrocyte count of >1.1 x 10(12)/l as a result of the reduced mean cell Hb in homozygous alpha(+)-thalassaemia.",
+        "relevance_score": 0.6576524896494844
+      },
+      {
+        "sentence_index": 2,
+        "sentence": "Alpha(+)-thalassaemia homozygosity confers considerable protection against severe malaria, including severe malarial anaemia (SMA) (Hb concentration < 50 g/l), but does not influence parasite count.",
+        "relevance_score": 0.6126240253448486
+      },
+      {
+        "sentence_index": 8,
+        "sentence": "In addition, children homozygous for alpha(+)-thalassaemia require a 10% greater reduction in erythrocyte count than children of normal genotype (p = 0.02) for Hb concentration to fall to 50 g/l, the cutoff for SMA.",
+        "relevance_score": 0.6041940733775956
+      }
+    ],
+    "nli": {
+      "claim": "A high microerythrocyte count protects against severe anemia in homozygous alpha (+)- thalassemia trait subjects.",
+      "verdict": "CONTRADICTED",
+      "support_score": 0.10648929766355957,
+      "contradiction_score": 1.0520199751340704,
+      "neutral_score": 2.433931787467423,
+      "support_ratio": 0.02964260119432626,
+      "contradiction_ratio": 0.2928426541969352,
+      "neutral_ratio": 0.6775147446087384,
+      "support_vs_contradiction": 0.09191924498489643,
+      "contradiction_vs_support": 0.9080807550151035,
+      "evidence": [
+        {
+          "chunk": "Individuals homozygous for alpha(+)-thalassaemia have microcytosis and an increased erythrocyte count.",
+          "label": "neutral",
+          "probability": 0.99609375,
+          "all_probs": {
+            "entailment": 0.0025882720947265625,
+            "neutral": 0.99609375,
+            "contradiction": 0.0010890960693359375
+          },
+          "retrieval_score": 0.9227824413530109
+        },
+        {
+          "chunk": "CONCLUSIONS The increased erythrocyte count and microcytosis in children homozygous for alpha(+)-thalassaemia may contribute substantially to their protection against SMA.",
+          "label": "neutral",
+          "probability": 0.89892578125,
+          "all_probs": {
+            "entailment": 0.095947265625,
+            "neutral": 0.89892578125,
+            "contradiction": 0.005283355712890625
+          },
+          "retrieval_score": 0.7953975869219985
+        },
+        {
+          "chunk": "This model predicted that children homozygous for alpha(+)-thalassaemia lose less Hb than children of normal genotype for a reduction in erythrocyte count of >1.1 x 10(12)/l as a result of the reduced mean cell Hb in homozygous alpha(+)-thalassaemia.",
+          "label": "contradiction",
+          "probability": 0.57421875,
+          "all_probs": {
+            "entailment": 0.0097198486328125,
+            "neutral": 0.416015625,
+            "contradiction": 0.57421875
+          },
+          "retrieval_score": 0.6576524896494844
+        },
+        {
+          "chunk": "Alpha(+)-thalassaemia homozygosity confers considerable protection against severe malaria, including severe malarial anaemia (SMA) (Hb concentration < 50 g/l), but does not influence parasite count.",
+          "label": "neutral",
+          "probability": 0.85595703125,
+          "all_probs": {
+            "entailment": 0.03399658203125,
+            "neutral": 0.85595703125,
+            "contradiction": 0.10992431640625
+          },
+          "retrieval_score": 0.6126240253448486
+        },
+        {
+          "chunk": "In addition, children homozygous for alpha(+)-thalassaemia require a 10% greater reduction in erythrocyte count than children of normal genotype (p = 0.02) for Hb concentration to fall to 50 g/l, the cutoff for SMA.",
+          "label": "contradiction",
+          "probability": 0.99609375,
+          "all_probs": {
+            "entailment": 0.0009355545043945312,
+            "neutral": 0.002941131591796875,
+            "contradiction": 0.99609375
+          },
+          "retrieval_score": 0.6041940733775956
+        }
+      ]
+    },
+    "llama": {
+      "verdict": "SUPPORTED"
+    },
+    "hybrid": {
+      "llama": {
+        "verdict": "NOT ENOUGH EVIDENCE",
+        "agreement": false,
+        "nli_verdict": "CONTRADICTED",
+        "llm_verdict": "SUPPORTED"
+      }
+    }
+  },
+  {
+    "id": "scifact_44_56893404",
+    "source": "SciFact",
+    "claim": "A mutation in HNF4A leads to an increased risk of developing diabetes by the age of 14 years.",
+    "gold_label": "SUPPORTED",
+    "retrieved_evidence": [
+      {
+        "sentence_index": 3,
+        "sentence": "We assessed the in utero and neonatal role of two key regulators of pancreatic insulin secretion by studying birthweight and the incidence of neonatal hypoglycaemia in patients with heterozygous mutations in the maturity-onset diabetes of the young (MODY) genes HNF4A (encoding HNF-4α) and HNF1A/TCF1 (encoding HNF-1α), and the effect of pancreatic deletion of Hnf4a on foetal and neonatal insulin secretion in mice.",
+        "relevance_score": 0.9673430174567814
+      },
+      {
+        "sentence_index": 2,
+        "sentence": "The increased rate of macrosomia in the offspring of pregnant women with diabetes and in congenital hyperinsulinaemia is mediated by increased foetal insulin secretion.",
+        "relevance_score": 0.5454221725463867
+      },
+      {
+        "sentence_index": 1,
+        "sentence": "Factors that predict macrosomia are poorly understood.",
+        "relevance_score": 0.1702147275209427
+      },
+      {
+        "sentence_index": 0,
+        "sentence": "Background  Macrosomia is associated with considerable neonatal and maternal morbidity.",
+        "relevance_score": 0.0
+      }
+    ],
+    "nli": {
+      "claim": "A mutation in HNF4A leads to an increased risk of developing diabetes by the age of 14 years.",
+      "verdict": "CONTRADICTED",
+      "support_score": 0.006889137981069169,
+      "contradiction_score": 0.009803787652138227,
+      "neutral_score": 1.6664333769230077,
+      "support_ratio": 0.004093060616191682,
+      "contradiction_ratio": 0.005824748646164531,
+      "neutral_ratio": 0.9900821907376438,
+      "support_vs_contradiction": 0.4126980573953161,
+      "contradiction_vs_support": 0.5873019426046839,
+      "evidence": [
+        {
+          "chunk": "We assessed the in utero and neonatal role of two key regulators of pancreatic insulin secretion by studying birthweight and the incidence of neonatal hypoglycaemia in patients with heterozygous mutations in the maturity-onset diabetes of the young (MODY) genes HNF4A (encoding HNF-4α) and HNF1A/TCF1 (encoding HNF-1α), and the effect of pancreatic deletion of Hnf4a on foetal and neonatal insulin secretion in mice.",
+          "label": "neutral",
+          "probability": 0.99169921875,
+          "all_probs": {
+            "entailment": 0.0047607421875,
+            "neutral": 0.99169921875,
+            "contradiction": 0.0036220550537109375
+          },
+          "retrieval_score": 0.9673430174567814
+        },
+        {
+          "chunk": "The increased rate of macrosomia in the offspring of pregnant women with diabetes and in congenital hyperinsulinaemia is mediated by increased foetal insulin secretion.",
+          "label": "neutral",
+          "probability": 0.99169921875,
+          "all_probs": {
+            "entailment": 0.0025920867919921875,
+            "neutral": 0.99169921875,
+            "contradiction": 0.00576019287109375
+          },
+          "retrieval_score": 0.5454221725463867
+        },
+        {
+          "chunk": "Factors that predict macrosomia are poorly understood.",
+          "label": "neutral",
+          "probability": 0.9765625,
+          "all_probs": {
+            "entailment": 0.0051116943359375,
+            "neutral": 0.9765625,
+            "contradiction": 0.0185546875
+          },
+          "retrieval_score": 0.1702147275209427
+        },
+        {
+          "chunk": "Background  Macrosomia is associated with considerable neonatal and maternal morbidity.",
+          "label": "neutral",
+          "probability": 0.994140625,
+          "all_probs": {
+            "entailment": 0.0028095245361328125,
+            "neutral": 0.994140625,
+            "contradiction": 0.0029048919677734375
+          },
+          "retrieval_score": 0.0
+        }
+      ]
+    },
+    "llama": {
+      "verdict": "NOT ENOUGH EVIDENCE"
+    },
+    "hybrid": {
+      "llama": {
+        "verdict": "NOT ENOUGH EVIDENCE",
+        "agreement": false,
+        "nli_verdict": "CONTRADICTED",
+        "llm_verdict": "NOT ENOUGH EVIDENCE"
+      }
+    }
+  },
+  {
+    "id": "scifact_46_380526",
+    "source": "SciFact",
+    "claim": "A single nucleotide variant the gene DGKK is strongly associated with increased risk of hypospadias.",
+    "gold_label": "SUPPORTED",
+    "retrieved_evidence": [
+      {
+        "sentence_index": 4,
+        "sentence": "We propose DGKK as a major risk gene for hypospadias.",
+        "relevance_score": 0.9999999761581421
+      },
+      {
+        "sentence_index": 3,
+        "sentence": "Expression studies showed expression of DGKK in preputial tissue of cases and controls, which was lower in carriers of the risk allele of rs1934179 (P = 0.047).",
+        "relevance_score": 0.21049723826797279
+      },
+      {
+        "sentence_index": 2,
+        "sentence": "Individual genotyping of two SNPs (rs1934179 and rs7063116) in DGKK, encoding diacylglycerol kinase κ, produced compelling evidence for association with hypospadias in the discovery sample (allele-specific odds ratio (OR) = 2.5, P = 2.5 × 10−11 and OR = 2.3, P = 2.9 × 10−9, respectively) and in the Dutch (OR = 3.9, P = 2.4 × 10−5 and OR = 3.8, P = 3.4 × 10−5) and Swedish (OR = 2.5, P = 2.6 × 10−8 and OR = 2.2, P = 2.7 × 10−6) replication samples.",
+        "relevance_score": 0.19593940675258636
+      },
+      {
+        "sentence_index": 1,
+        "sentence": "We performed a genome-wide association study using pooled DNA from 436 individuals with hypospadias (cases) and 494 controls of European descent and selected the highest ranked SNPs for individual genotyping in the discovery sample, an additional Dutch sample of 133 cases and their parents, and a Swedish series of 266 cases and 402 controls.",
+        "relevance_score": 0.10962109045299652
+      },
+      {
+        "sentence_index": 0,
+        "sentence": "Hypospadias is a common congenital malformation of the male external genitalia.",
+        "relevance_score": 0.05009785137820767
+      }
+    ],
+    "nli": {
+      "claim": "A single nucleotide variant the gene DGKK is strongly associated with increased risk of hypospadias.",
+      "verdict": "SUPPORTED",
+      "support_score": 0.23149332065137826,
+      "contradiction_score": 0.006332112442516158,
+      "neutral_score": 1.3281397403735213,
+      "support_ratio": 0.14782788568585947,
+      "contradiction_ratio": 0.004043584461393461,
+      "neutral_ratio": 0.848128529852747,
+      "support_vs_contradiction": 0.9733749567481447,
+      "contradiction_vs_support": 0.0266250432518553,
+      "evidence": [
+        {
+          "chunk": "We propose DGKK as a major risk gene for hypospadias.",
+          "label": "neutral",
+          "probability": 0.99609375,
+          "all_probs": {
+            "entailment": 0.002506256103515625,
+            "neutral": 0.99609375,
+            "contradiction": 0.0012416839599609375
+          },
+          "retrieval_score": 0.9999999761581421
+        },
+        {
+          "chunk": "Expression studies showed expression of DGKK in preputial tissue of cases and controls, which was lower in carriers of the risk allele of rs1934179 (P = 0.047).",
+          "label": "neutral",
+          "probability": 0.8076171875,
+          "all_probs": {
+            "entailment": 0.175048828125,
+            "neutral": 0.8076171875,
+            "contradiction": 0.01739501953125
+          },
+          "retrieval_score": 0.21049723826797279
+        },
+        {
+          "chunk": "Individual genotyping of two SNPs (rs1934179 and rs7063116) in DGKK, encoding diacylglycerol kinase κ, produced compelling evidence for association with hypospadias in the discovery sample (allele-specific odds ratio (OR) = 2.5, P = 2.5 × 10−11 and OR = 2.3, P = 2.9 × 10−9, respectively) and in the Dutch (OR = 3.9, P = 2.4 × 10−5 and OR = 3.8, P = 3.4 × 10−5) and Swedish (OR = 2.5, P = 2.6 × 10−8 and OR = 2.2, P = 2.7 × 10−6) replication samples.",
+          "label": "entailment",
+          "probability": 0.9794921875,
+          "all_probs": {
+            "entailment": 0.9794921875,
+            "neutral": 0.01361083984375,
+            "contradiction": 0.006725311279296875
+          },
+          "retrieval_score": 0.19593940675258636
+        },
+        {
+          "chunk": "We performed a genome-wide association study using pooled DNA from 436 individuals with hypospadias (cases) and 494 controls of European descent and selected the highest ranked SNPs for individual genotyping in the discovery sample, an additional Dutch sample of 133 cases and their parents, and a Swedish series of 266 cases and 402 controls.",
+          "label": "neutral",
+          "probability": 0.99755859375,
+          "all_probs": {
+            "entailment": 0.0015840530395507812,
+            "neutral": 0.99755859375,
+            "contradiction": 0.00080108642578125
+          },
+          "retrieval_score": 0.10962109045299652
+        },
+        {
+          "chunk": "Hypospadias is a common congenital malformation of the male external genitalia.",
+          "label": "neutral",
+          "probability": 0.99853515625,
+          "all_probs": {
+            "entailment": 0.0008983612060546875,
+            "neutral": 0.99853515625,
+            "contradiction": 0.0004642009735107422
+          },
+          "retrieval_score": 0.05009785137820767
+        }
+      ]
+    },
+    "llama": {
+      "verdict": "SUPPORTED"
+    },
+    "hybrid": {
+      "llama": {
+        "verdict": "SUPPORTED",
+        "agreement": true,
+        "nli_verdict": "SUPPORTED",
+        "llm_verdict": "SUPPORTED"
+      }
+    }
+  },
+  {
+    "id": "scifact_52_45638119",
+    "source": "SciFact",
+    "claim": "ALDH1 expression is associated with poorer prognosis for breast cancer primary tumors.",
+    "gold_label": "SUPPORTED",
+    "retrieved_evidence": [
+      {
+        "sentence_index": 4,
+        "sentence": "In a series of 577 breast carcinomas, expression of ALDH1 detected by immunostaining correlated with poor prognosis.",
+        "relevance_score": 0.9999999761581421
+      },
+      {
+        "sentence_index": 3,
+        "sentence": "In breast carcinomas, high ALDH activity identifies the tumorigenic cell fraction, capable of self-renewal and of generating tumors that recapitulate the heterogeneity of the parental tumor.",
+        "relevance_score": 0.6469841599464417
+      },
+      {
+        "sentence_index": 1,
+        "sentence": "Utilizing in vitro and in vivo experimental systems, we show that normal and cancer human mammary epithelial cells with increased aldehyde dehydrogenase activity (ALDH) have stem/progenitor properties.",
+        "relevance_score": 0.3683589440010256
+      },
+      {
+        "sentence_index": 5,
+        "sentence": "These findings offer an important new tool for the study of normal and malignant breast stem cells and facilitate the clinical application of stem cell concepts.",
+        "relevance_score": 0.18575340793063494
+      },
+      {
+        "sentence_index": 0,
+        "sentence": "Application of stem cell biology to breast cancer research has been limited by the lack of simple methods for identification and isolation of normal and malignant stem cells.",
+        "relevance_score": 0.1424904518975526
+      }
+    ],
+    "nli": {
+      "claim": "ALDH1 expression is associated with poorer prognosis for breast cancer primary tumors.",
+      "verdict": "SUPPORTED",
+      "support_score": 0.9336002215368027,
+      "contradiction_score": 0.010396018559774957,
+      "neutral_score": 1.3991995206227739,
+      "support_ratio": 0.39843031350064884,
+      "contradiction_ratio": 0.004436683752186126,
+      "neutral_ratio": 0.597133002747165,
+      "support_vs_contradiction": 0.9889872246114969,
+      "contradiction_vs_support": 0.011012775388502998,
+      "evidence": [
+        {
+          "chunk": "In a series of 577 breast carcinomas, expression of ALDH1 detected by immunostaining correlated with poor prognosis.",
+          "label": "entailment",
+          "probability": 0.9306640625,
+          "all_probs": {
+            "entailment": 0.9306640625,
+            "neutral": 0.06707763671875,
+            "contradiction": 0.002033233642578125
+          },
+          "retrieval_score": 0.9999999761581421
+        },
+        {
+          "chunk": "In breast carcinomas, high ALDH activity identifies the tumorigenic cell fraction, capable of self-renewal and of generating tumors that recapitulate the heterogeneity of the parental tumor.",
+          "label": "neutral",
+          "probability": 0.986328125,
+          "all_probs": {
+            "entailment": 0.0035648345947265625,
+            "neutral": 0.986328125,
+            "contradiction": 0.00994110107421875
+          },
+          "retrieval_score": 0.6469841599464417
+        },
+        {
+          "chunk": "Utilizing in vitro and in vivo experimental systems, we show that normal and cancer human mammary epithelial cells with increased aldehyde dehydrogenase activity (ALDH) have stem/progenitor properties.",
+          "label": "neutral",
+          "probability": 0.99462890625,
+          "all_probs": {
+            "entailment": 0.0007009506225585938,
+            "neutral": 0.99462890625,
+            "contradiction": 0.00458526611328125
+          },
+          "retrieval_score": 0.3683589440010256
+        },
+        {
+          "chunk": "These findings offer an important new tool for the study of normal and malignant breast stem cells and facilitate the clinical application of stem cell concepts.",
+          "label": "neutral",
+          "probability": 0.998046875,
+          "all_probs": {
+            "entailment": 0.00118255615234375,
+            "neutral": 0.998046875,
+            "contradiction": 0.0006723403930664062
+          },
+          "retrieval_score": 0.18575340793063494
+        },
+        {
+          "chunk": "Application of stem cell biology to breast cancer research has been limited by the lack of simple methods for identification and isolation of normal and malignant stem cells.",
+          "label": "neutral",
+          "probability": 0.998046875,
+          "all_probs": {
+            "entailment": 0.0010662078857421875,
+            "neutral": 0.998046875,
+            "contradiction": 0.0008220672607421875
+          },
+          "retrieval_score": 0.1424904518975526
+        }
+      ]
+    },
+    "llama": {
+      "verdict": "SUPPORTED"
+    },
+    "hybrid": {
+      "llama": {
+        "verdict": "SUPPORTED",
+        "agreement": true,
+        "nli_verdict": "SUPPORTED",
+        "llm_verdict": "SUPPORTED"
+      }
+    }
+  },
+  {
+    "id": "scifact_55_49556906",
+    "source": "SciFact",
+    "claim": "AMP-activated protein kinase (AMPK) activation reduces inflammation-related fibrosis in the lungs.",
+    "gold_label": "SUPPORTED",
+    "retrieved_evidence": [
+      {
+        "sentence_index": 4,
+        "sentence": "Here, we demonstrate that in humans with idiopathic pulmonary fibrosis (IPF) and in an experimental mouse model of lung fibrosis, AMPK activity is lower in fibrotic regions associated with metabolically active and apoptosis-resistant myofibroblasts.",
+        "relevance_score": 0.9561209017571476
+      },
+      {
+        "sentence_index": 3,
+        "sentence": "However, the role of AMPK in fibrosis is not well understood.",
+        "relevance_score": 0.8344784733226802
+      },
+      {
+        "sentence_index": 5,
+        "sentence": "Pharmacological activation of AMPK in myofibroblasts from lungs of humans with IPF display lower fibrotic activity, along with enhanced mitochondrial biogenesis and normalization of sensitivity to apoptosis.",
+        "relevance_score": 0.8213193469138754
+      },
+      {
+        "sentence_index": 7,
+        "sentence": "These studies implicate deficient AMPK activation in non-resolving, pathologic fibrotic processes, and support a role for metformin (or other AMPK activators) to reverse established fibrosis by facilitating deactivation and apoptosis of myofibroblasts.",
+        "relevance_score": 0.7039283275604248
+      },
+      {
+        "sentence_index": 0,
+        "sentence": "Fibrosis is a pathological result of a dysfunctional repair response to tissue injury and occurs in a number of organs, including the lungs1.",
+        "relevance_score": 0.5169501542674187
+      }
+    ],
+    "nli": {
+      "claim": "AMP-activated protein kinase (AMPK) activation reduces inflammation-related fibrosis in the lungs.",
+      "verdict": "CONTRADICTED",
+      "support_score": 0.0753421878053205,
+      "contradiction_score": 0.20441925619973075,
+      "neutral_score": 3.553275179613229,
+      "support_ratio": 0.0196560051999189,
+      "contradiction_ratio": 0.053330890432965565,
+      "neutral_ratio": 0.9270131043671156,
+      "support_vs_contradiction": 0.26930868931302826,
+      "contradiction_vs_support": 0.7306913106869717,
+      "evidence": [
+        {
+          "chunk": "Here, we demonstrate that in humans with idiopathic pulmonary fibrosis (IPF) and in an experimental mouse model of lung fibrosis, AMPK activity is lower in fibrotic regions associated with metabolically active and apoptosis-resistant myofibroblasts.",
+          "label": "neutral",
+          "probability": 0.7265625,
+          "all_probs": {
+            "entailment": 0.062103271484375,
+            "neutral": 0.7265625,
+            "contradiction": 0.211181640625
+          },
+          "retrieval_score": 0.9561209017571476
+        },
+        {
+          "chunk": "However, the role of AMPK in fibrosis is not well understood.",
+          "label": "neutral",
+          "probability": 0.99560546875,
+          "all_probs": {
+            "entailment": 0.002422332763671875,
+            "neutral": 0.99560546875,
+            "contradiction": 0.0020904541015625
+          },
+          "retrieval_score": 0.8344784733226802
+        },
+        {
+          "chunk": "Pharmacological activation of AMPK in myofibroblasts from lungs of humans with IPF display lower fibrotic activity, along with enhanced mitochondrial biogenesis and normalization of sensitivity to apoptosis.",
+          "label": "neutral",
+          "probability": 0.9853515625,
+          "all_probs": {
+            "entailment": 0.01447296142578125,
+            "neutral": 0.9853515625,
+            "contradiction": 0.0003247261047363281
+          },
+          "retrieval_score": 0.8213193469138754
+        },
+        {
+          "chunk": "These studies implicate deficient AMPK activation in non-resolving, pathologic fibrotic processes, and support a role for metformin (or other AMPK activators) to reverse established fibrosis by facilitating deactivation and apoptosis of myofibroblasts.",
+          "label": "neutral",
+          "probability": 0.998046875,
+          "all_probs": {
+            "entailment": 0.001781463623046875,
+            "neutral": 0.998046875,
+            "contradiction": 0.00030350685119628906
+          },
+          "retrieval_score": 0.7039283275604248
+        },
+        {
+          "chunk": "Fibrosis is a pathological result of a dysfunctional repair response to tissue injury and occurs in a number of organs, including the lungs1.",
+          "label": "neutral",
+          "probability": 0.998046875,
+          "all_probs": {
+            "entailment": 0.0015506744384765625,
+            "neutral": 0.998046875,
+            "contradiction": 0.0005402565002441406
+          },
+          "retrieval_score": 0.5169501542674187
+        }
+      ]
+    },
+    "llama": {
+      "verdict": "SUPPORTED"
+    },
+    "hybrid": {
+      "llama": {
+        "verdict": "NOT ENOUGH EVIDENCE",
+        "agreement": false,
+        "nli_verdict": "CONTRADICTED",
+        "llm_verdict": "SUPPORTED"
+      }
+    }
+  },
+  {
+    "id": "scifact_58_4709641",
+    "source": "SciFact",
+    "claim": "APOE4 expression in iPSC-derived neurons results in decreased tau phosphorylation.",
+    "gold_label": "CONTRADICTED",
+    "retrieved_evidence": [
+      {
+        "sentence_index": 1,
+        "sentence": "Using human neurons derived from induced pluripotent stem cells that expressed apolipoprotein E4 (ApoE4), a variant of the APOE gene product and the major genetic risk factor for AD, we demonstrated that ApoE4-expressing neurons had higher levels of tau phosphorylation, unrelated to their increased production of amyloid-β (Aβ) peptides, and that they displayed GABAergic neuron degeneration.",
+        "relevance_score": 0.9288734935348175
+      },
+      {
+        "sentence_index": 2,
+        "sentence": "ApoE4 increased Aβ production in human, but not in mouse, neurons.",
+        "relevance_score": 0.8546026110649109
+      },
+      {
+        "sentence_index": 4,
+        "sentence": "Neurons that lacked APOE behaved similarly to those expressing ApoE3, and the introduction of ApoE4 expression recapitulated the pathological phenotypes, suggesting a gain of toxic effects from ApoE4.",
+        "relevance_score": 0.7393250763665012
+      },
+      {
+        "sentence_index": 5,
+        "sentence": "Treatment of ApoE4-expressing neurons with a small-molecule structure corrector ameliorated the detrimental effects, thus showing that correcting the pathogenic conformation of ApoE4 is a viable therapeutic approach for ApoE4-related AD.",
+        "relevance_score": 0.6263372302055359
+      },
+      {
+        "sentence_index": 3,
+        "sentence": "Converting ApoE4 to ApoE3 by gene editing rescued these phenotypes, indicating the specific effects of ApoE4.",
+        "relevance_score": 0.4815636972703295
+      }
+    ],
+    "nli": {
+      "claim": "APOE4 expression in iPSC-derived neurons results in decreased tau phosphorylation.",
+      "verdict": "CONTRADICTED",
+      "support_score": 0.0029699983775577955,
+      "contradiction_score": 0.9920428035481433,
+      "neutral_score": 2.635554327421537,
+      "support_ratio": 0.0008180535634640063,
+      "contradiction_ratio": 0.27324733800653034,
+      "neutral_ratio": 0.7259346084300057,
+      "support_vs_contradiction": 0.0029848845882282115,
+      "contradiction_vs_support": 0.9970151154117718,
+      "evidence": [
+        {
+          "chunk": "Using human neurons derived from induced pluripotent stem cells that expressed apolipoprotein E4 (ApoE4), a variant of the APOE gene product and the major genetic risk factor for AD, we demonstrated that ApoE4-expressing neurons had higher levels of tau phosphorylation, unrelated to their increased production of amyloid-β (Aβ) peptides, and that they displayed GABAergic neuron degeneration.",
+          "label": "contradiction",
+          "probability": 0.998046875,
+          "all_probs": {
+            "entailment": 0.0005555152893066406,
+            "neutral": 0.0012531280517578125,
+            "contradiction": 0.998046875
+          },
+          "retrieval_score": 0.9288734935348175
+        },
+        {
+          "chunk": "ApoE4 increased Aβ production in human, but not in mouse, neurons.",
+          "label": "neutral",
+          "probability": 0.9248046875,
+          "all_probs": {
+            "entailment": 0.0015306472778320312,
+            "neutral": 0.9248046875,
+            "contradiction": 0.07354736328125
+          },
+          "retrieval_score": 0.8546026110649109
+        },
+        {
+          "chunk": "Neurons that lacked APOE behaved similarly to those expressing ApoE3, and the introduction of ApoE4 expression recapitulated the pathological phenotypes, suggesting a gain of toxic effects from ApoE4.",
+          "label": "neutral",
+          "probability": 0.99853515625,
+          "all_probs": {
+            "entailment": 0.0004055500030517578,
+            "neutral": 0.99853515625,
+            "contradiction": 0.0012140274047851562
+          },
+          "retrieval_score": 0.7393250763665012
+        },
+        {
+          "chunk": "Treatment of ApoE4-expressing neurons with a small-molecule structure corrector ameliorated the detrimental effects, thus showing that correcting the pathogenic conformation of ApoE4 is a viable therapeutic approach for ApoE4-related AD.",
+          "label": "neutral",
+          "probability": 0.99853515625,
+          "all_probs": {
+            "entailment": 0.0006923675537109375,
+            "neutral": 0.99853515625,
+            "contradiction": 0.00092315673828125
+          },
+          "retrieval_score": 0.6263372302055359
+        },
+        {
+          "chunk": "Converting ApoE4 to ApoE3 by gene editing rescued these phenotypes, indicating the specific effects of ApoE4.",
+          "label": "neutral",
+          "probability": 0.99755859375,
+          "all_probs": {
+            "entailment": 0.0008563995361328125,
+            "neutral": 0.99755859375,
+            "contradiction": 0.0013580322265625
+          },
+          "retrieval_score": 0.4815636972703295
+        }
+      ]
+    },
+    "llama": {
+      "verdict": "CONTRADICTED"
+    },
+    "hybrid": {
+      "llama": {
+        "verdict": "CONTRADICTED",
+        "agreement": true,
+        "nli_verdict": "CONTRADICTED",
+        "llm_verdict": "CONTRADICTED"
+      }
+    }
+  },
+  {
+    "id": "scifact_67_21295300",
+    "source": "SciFact",
+    "claim": "Activated Cdk5 phosphorylates the ATM protein in response to DNA damage.",
+    "gold_label": "SUPPORTED",
+    "retrieved_evidence": [
+      {
+        "sentence_index": 7,
+        "sentence": "Thus, activation of Cdk5 by DNA damage serves as a critical signal to initiate the ATM response and regulate ATM-dependent cellular processes.",
+        "relevance_score": 0.9727163065079887
+      },
+      {
+        "sentence_index": 3,
+        "sentence": "Here we show that Cdk5 (cyclin-dependent kinase 5), activated by DNA damage, directly phosphorylates ATM at Ser 794 in post-mitotic neurons.",
+        "relevance_score": 0.6965961813926697
+      },
+      {
+        "sentence_index": 5,
+        "sentence": "The Cdk5-ATM signal regulates phosphorylation and function of the ATM targets p53 and H2AX.",
+        "relevance_score": 0.6206234822618788
+      },
+      {
+        "sentence_index": 0,
+        "sentence": "The phosphatidylinositol-3-kinase-like kinase ATM (ataxia-telangiectasia mutated) has a central role in coordinating DNA damage responses, including cell-cycle checkpoint control, DNA repair and apoptosis.",
+        "relevance_score": 0.5575075418003158
+      },
+      {
+        "sentence_index": 6,
+        "sentence": "Interruption of the Cdk5-ATM pathway attenuates DNA-damage-induced neuronal cell cycle re-entry and expression of the p53 targets PUMA and Bax, protecting neurons from death.",
+        "relevance_score": 0.53272545337677
+      }
+    ],
+    "nli": {
+      "claim": "Activated Cdk5 phosphorylates the ATM protein in response to DNA damage.",
+      "verdict": "SUPPORTED",
+      "support_score": 0.7119495333978171,
+      "contradiction_score": 0.01655026374185789,
+      "neutral_score": 2.6520407282032807,
+      "support_ratio": 0.21060227737562467,
+      "contradiction_ratio": 0.004895744812933094,
+      "neutral_ratio": 0.7845019778114423,
+      "support_vs_contradiction": 0.9772817181187428,
+      "contradiction_vs_support": 0.022718281881257293,
+      "evidence": [
+        {
+          "chunk": "Thus, activation of Cdk5 by DNA damage serves as a critical signal to initiate the ATM response and regulate ATM-dependent cellular processes.",
+          "label": "neutral",
+          "probability": 0.99658203125,
+          "all_probs": {
+            "entailment": 0.0024013519287109375,
+            "neutral": 0.99658203125,
+            "contradiction": 0.001251220703125
+          },
+          "retrieval_score": 0.9727163065079887
+        },
+        {
+          "chunk": "Here we show that Cdk5 (cyclin-dependent kinase 5), activated by DNA damage, directly phosphorylates ATM at Ser 794 in post-mitotic neurons.",
+          "label": "entailment",
+          "probability": 0.99462890625,
+          "all_probs": {
+            "entailment": 0.99462890625,
+            "neutral": 0.0046844482421875,
+            "contradiction": 0.00067138671875
+          },
+          "retrieval_score": 0.6965961813926697
+        },
+        {
+          "chunk": "The Cdk5-ATM signal regulates phosphorylation and function of the ATM targets p53 and H2AX.",
+          "label": "neutral",
+          "probability": 0.9931640625,
+          "all_probs": {
+            "entailment": 0.00241851806640625,
+            "neutral": 0.9931640625,
+            "contradiction": 0.004306793212890625
+          },
+          "retrieval_score": 0.6206234822618788
+        },
+        {
+          "chunk": "The phosphatidylinositol-3-kinase-like kinase ATM (ataxia-telangiectasia mutated) has a central role in coordinating DNA damage responses, including cell-cycle checkpoint control, DNA repair and apoptosis.",
+          "label": "neutral",
+          "probability": 0.982421875,
+          "all_probs": {
+            "entailment": 0.006328582763671875,
+            "neutral": 0.982421875,
+            "contradiction": 0.0114593505859375
+          },
+          "retrieval_score": 0.5575075418003158
+        },
+        {
+          "chunk": "Interruption of the Cdk5-ATM pathway attenuates DNA-damage-induced neuronal cell cycle re-entry and expression of the p53 targets PUMA and Bax, protecting neurons from death.",
+          "label": "neutral",
+          "probability": 0.96728515625,
+          "all_probs": {
+            "entailment": 0.0220184326171875,
+            "neutral": 0.96728515625,
+            "contradiction": 0.010894775390625
+          },
+          "retrieval_score": 0.53272545337677
+        }
+      ]
+    },
+    "llama": {
+      "verdict": "SUPPORTED"
+    },
+    "hybrid": {
+      "llama": {
+        "verdict": "SUPPORTED",
+        "agreement": true,
+        "nli_verdict": "SUPPORTED",
+        "llm_verdict": "SUPPORTED"
+      }
+    }
+  },
+  {
+    "id": "scifact_68_21295300",
+    "source": "SciFact",
+    "claim": "Activated Cdk5 regulates DNA damage-induced neuronal death.",
+    "gold_label": "SUPPORTED",
+    "retrieved_evidence": [
+      {
+        "sentence_index": 6,
+        "sentence": "Interruption of the Cdk5-ATM pathway attenuates DNA-damage-induced neuronal cell cycle re-entry and expression of the p53 targets PUMA and Bax, protecting neurons from death.",
+        "relevance_score": 0.9999999761581421
+      },
+      {
+        "sentence_index": 3,
+        "sentence": "Here we show that Cdk5 (cyclin-dependent kinase 5), activated by DNA damage, directly phosphorylates ATM at Ser 794 in post-mitotic neurons.",
+        "relevance_score": 0.9244637723683806
+      },
+      {
+        "sentence_index": 7,
+        "sentence": "Thus, activation of Cdk5 by DNA damage serves as a critical signal to initiate the ATM response and regulate ATM-dependent cellular processes.",
+        "relevance_score": 0.8821180284073316
+      },
+      {
+        "sentence_index": 0,
+        "sentence": "The phosphatidylinositol-3-kinase-like kinase ATM (ataxia-telangiectasia mutated) has a central role in coordinating DNA damage responses, including cell-cycle checkpoint control, DNA repair and apoptosis.",
+        "relevance_score": 0.5640000700950623
+      },
+      {
+        "sentence_index": 5,
+        "sentence": "The Cdk5-ATM signal regulates phosphorylation and function of the ATM targets p53 and H2AX.",
+        "relevance_score": 0.5386005644893754
+      }
+    ],
+    "nli": {
+      "claim": "Activated Cdk5 regulates DNA damage-induced neuronal death.",
+      "verdict": "CONTRADICTED",
+      "support_score": 0.22605872242332145,
+      "contradiction_score": 1.3878795046019972,
+      "neutral_score": 2.2956269659748063,
+      "support_ratio": 0.05782196005531969,
+      "contradiction_ratio": 0.3549958719416993,
+      "neutral_ratio": 0.5871821680029811,
+      "support_vs_contradiction": 0.14006652710616735,
+      "contradiction_vs_support": 0.8599334728938326,
+      "evidence": [
+        {
+          "chunk": "Interruption of the Cdk5-ATM pathway attenuates DNA-damage-induced neuronal cell cycle re-entry and expression of the p53 targets PUMA and Bax, protecting neurons from death.",
+          "label": "contradiction",
+          "probability": 0.591796875,
+          "all_probs": {
+            "entailment": 0.21044921875,
+            "neutral": 0.19775390625,
+            "contradiction": 0.591796875
+          },
+          "retrieval_score": 0.9999999761581421
+        },
+        {
+          "chunk": "Here we show that Cdk5 (cyclin-dependent kinase 5), activated by DNA damage, directly phosphorylates ATM at Ser 794 in post-mitotic neurons.",
+          "label": "neutral",
+          "probability": 0.97509765625,
+          "all_probs": {
+            "entailment": 0.00835418701171875,
+            "neutral": 0.97509765625,
+            "contradiction": 0.0166473388671875
+          },
+          "retrieval_score": 0.9244637723683806
+        },
+        {
+          "chunk": "Thus, activation of Cdk5 by DNA damage serves as a critical signal to initiate the ATM response and regulate ATM-dependent cellular processes.",
+          "label": "neutral",
+          "probability": 0.5185546875,
+          "all_probs": {
+            "entailment": 0.0017328262329101562,
+            "neutral": 0.5185546875,
+            "contradiction": 0.47998046875
+          },
+          "retrieval_score": 0.8821180284073316
+        },
+        {
+          "chunk": "The phosphatidylinositol-3-kinase-like kinase ATM (ataxia-telangiectasia mutated) has a central role in coordinating DNA damage responses, including cell-cycle checkpoint control, DNA repair and apoptosis.",
+          "label": "neutral",
+          "probability": 0.98388671875,
+          "all_probs": {
+            "entailment": 0.00788116455078125,
+            "neutral": 0.98388671875,
+            "contradiction": 0.00820159912109375
+          },
+          "retrieval_score": 0.5640000700950623
+        },
+        {
+          "chunk": "The Cdk5-ATM signal regulates phosphorylation and function of the ATM targets p53 and H2AX.",
+          "label": "contradiction",
+          "probability": 0.65478515625,
+          "all_probs": {
+            "entailment": 0.003551483154296875,
+            "neutral": 0.341796875,
+            "contradiction": 0.65478515625
+          },
+          "retrieval_score": 0.5386005644893754
+        }
+      ]
+    },
+    "llama": {
+      "verdict": "SUPPORTED"
+    },
+    "hybrid": {
+      "llama": {
+        "verdict": "NOT ENOUGH EVIDENCE",
+        "agreement": false,
+        "nli_verdict": "CONTRADICTED",
+        "llm_verdict": "SUPPORTED"
+      }
+    }
+  },
+  {
+    "id": "scifact_71_1127562",
+    "source": "SciFact",
+    "claim": "Activation of the Rac1 homolog CED-10 kills viable cells in SRGP-1 mutant Caenorhabditis elegans.",
+    "gold_label": "SUPPORTED",
+    "retrieved_evidence": [
+      {
+        "sentence_index": 2,
+        "sentence": "Here, we identify srgp-1 as a negative regulator of cell clearance in both Caenorhabditis elegans and mammalian cells.",
+        "relevance_score": 0.9999999761581421
+      },
+      {
+        "sentence_index": 4,
+        "sentence": "We show that SRGP-1 functions in engulfing cells and functions as a GTPase activating protein (GAP) for CED-10 (Rac1).",
+        "relevance_score": 0.8217985071228227
+      },
+      {
+        "sentence_index": 7,
+        "sentence": "We propose that C. elegans uses the engulfment machinery as part of a primitive, but evolutionarily conserved, survey mechanism that identifies and removes unfit cells within a tissue.",
+        "relevance_score": 0.5359801905814944
+      },
+      {
+        "sentence_index": 5,
+        "sentence": "Interestingly, loss of srgp-1 function promotes not only the clearance of already dead cells, but also the removal of cells that have been brought to the verge of death through sublethal apoptotic, necrotic or cytotoxic insults.",
+        "relevance_score": 0.49704989884942263
+      },
+      {
+        "sentence_index": 3,
+        "sentence": "Loss of srgp-1 function results in improved engulfment of apoptotic cells, whereas srgp-1 overexpression inhibits apoptotic cell corpse removal.",
+        "relevance_score": 0.28974036952100174
+      }
+    ],
+    "nli": {
+      "claim": "Activation of the Rac1 homolog CED-10 kills viable cells in SRGP-1 mutant Caenorhabditis elegans.",
+      "verdict": "CONTRADICTED",
+      "support_score": 0.01687060905485067,
+      "contradiction_score": 1.014036511857325,
+      "neutral_score": 2.1140043831261988,
+      "support_ratio": 0.005364414557671069,
+      "contradiction_ratio": 0.32243721661331415,
+      "neutral_ratio": 0.6721983688290148,
+      "support_vs_contradiction": 0.01636481959686444,
+      "contradiction_vs_support": 0.9836351804031355,
+      "evidence": [
+        {
+          "chunk": "Here, we identify srgp-1 as a negative regulator of cell clearance in both Caenorhabditis elegans and mammalian cells.",
+          "label": "neutral",
+          "probability": 0.9892578125,
+          "all_probs": {
+            "entailment": 0.00511932373046875,
+            "neutral": 0.9892578125,
+            "contradiction": 0.0057830810546875
+          },
+          "retrieval_score": 0.9999999761581421
+        },
+        {
+          "chunk": "We show that SRGP-1 functions in engulfing cells and functions as a GTPase activating protein (GAP) for CED-10 (Rac1).",
+          "label": "neutral",
+          "probability": 0.9912109375,
+          "all_probs": {
+            "entailment": 0.002986907958984375,
+            "neutral": 0.9912109375,
+            "contradiction": 0.005779266357421875
+          },
+          "retrieval_score": 0.8217985071228227
+        },
+        {
+          "chunk": "We propose that C. elegans uses the engulfment machinery as part of a primitive, but evolutionarily conserved, survey mechanism that identifies and removes unfit cells within a tissue.",
+          "label": "contradiction",
+          "probability": 0.9638671875,
+          "all_probs": {
+            "entailment": 0.0012273788452148438,
+            "neutral": 0.035003662109375,
+            "contradiction": 0.9638671875
+          },
+          "retrieval_score": 0.5359801905814944
+        },
+        {
+          "chunk": "Interestingly, loss of srgp-1 function promotes not only the clearance of already dead cells, but also the removal of cells that have been brought to the verge of death through sublethal apoptotic, necrotic or cytotoxic insults.",
+          "label": "contradiction",
+          "probability": 0.78857421875,
+          "all_probs": {
+            "entailment": 0.00536346435546875,
+            "neutral": 0.206298828125,
+            "contradiction": 0.78857421875
+          },
+          "retrieval_score": 0.49704989884942263
+        },
+        {
+          "chunk": "Loss of srgp-1 function results in improved engulfment of apoptotic cells, whereas srgp-1 overexpression inhibits apoptotic cell corpse removal.",
+          "label": "neutral",
+          "probability": 0.65185546875,
+          "all_probs": {
+            "entailment": 0.0206146240234375,
+            "neutral": 0.65185546875,
+            "contradiction": 0.32763671875
+          },
+          "retrieval_score": 0.28974036952100174
+        }
+      ]
+    },
+    "llama": {
+      "verdict": "NOT ENOUGH EVIDENCE"
+    },
+    "hybrid": {
+      "llama": {
+        "verdict": "NOT ENOUGH EVIDENCE",
+        "agreement": false,
+        "nli_verdict": "CONTRADICTED",
+        "llm_verdict": "NOT ENOUGH EVIDENCE"
+      }
+    }
+  },
+  {
+    "id": "scifact_76_5531479",
+    "source": "SciFact",
+    "claim": "Active Ly49Q induces neutrophil polarization.",
+    "gold_label": "SUPPORTED",
+    "retrieved_evidence": [
+      {
+        "sentence_index": 3,
+        "sentence": "However, in the presence of inflammatory stimuli, Ly49Q mediated rapid neutrophil polarization and tissue infiltration in an ITIM-domain-dependent manner.",
+        "relevance_score": 0.9999999761581421
+      },
+      {
+        "sentence_index": 2,
+        "sentence": "During the steady state, Ly49Q inhibited neutrophil adhesion by preventing focal-complex formation, likely by inhibiting Src and PI3 kinases.",
+        "relevance_score": 0.9103855848312378
+      },
+      {
+        "sentence_index": 6,
+        "sentence": "We propose that Ly49Q is pivotal in switching neutrophils to their polarized morphology and rapid migration upon inflammation, through its spatiotemporal regulation of membrane rafts and raft-associated signaling molecules.",
+        "relevance_score": 0.7889854597440548
+      },
+      {
+        "sentence_index": 1,
+        "sentence": "Here, we show that an inhibitory MHC I receptor, Ly49Q, was crucial for the swift polarization of and tissue infiltration by neutrophils.",
+        "relevance_score": 0.7750869989395142
+      },
+      {
+        "sentence_index": 5,
+        "sentence": "Ly49Q-dependent polarization and migration were affected by Ly49Q regulation of membrane raft functions.",
+        "relevance_score": 0.6388964091932657
+      }
+    ],
+    "nli": {
+      "claim": "Active Ly49Q induces neutrophil polarization.",
+      "verdict": "SUPPORTED",
+      "support_score": 1.1027354471120274,
+      "contradiction_score": 0.952072665397686,
+      "neutral_score": 2.0587488102411777,
+      "support_ratio": 0.2680734624123267,
+      "contradiction_ratio": 0.2314475485028657,
+      "neutral_ratio": 0.5004789890848075,
+      "support_vs_contradiction": 0.5366610343800726,
+      "contradiction_vs_support": 0.4633389656199274,
+      "evidence": [
+        {
+          "chunk": "However, in the presence of inflammatory stimuli, Ly49Q mediated rapid neutrophil polarization and tissue infiltration in an ITIM-domain-dependent manner.",
+          "label": "entailment",
+          "probability": 0.4970703125,
+          "all_probs": {
+            "entailment": 0.4970703125,
+            "neutral": 0.27099609375,
+            "contradiction": 0.23193359375
+          },
+          "retrieval_score": 0.9999999761581421
+        },
+        {
+          "chunk": "During the steady state, Ly49Q inhibited neutrophil adhesion by preventing focal-complex formation, likely by inhibiting Src and PI3 kinases.",
+          "label": "neutral",
+          "probability": 0.970703125,
+          "all_probs": {
+            "entailment": 0.0035552978515625,
+            "neutral": 0.970703125,
+            "contradiction": 0.0259246826171875
+          },
+          "retrieval_score": 0.9103855848312378
+        },
+        {
+          "chunk": "We propose that Ly49Q is pivotal in switching neutrophils to their polarized morphology and rapid migration upon inflammation, through its spatiotemporal regulation of membrane rafts and raft-associated signaling molecules.",
+          "label": "entailment",
+          "probability": 0.74462890625,
+          "all_probs": {
+            "entailment": 0.74462890625,
+            "neutral": 0.25048828125,
+            "contradiction": 0.004901885986328125
+          },
+          "retrieval_score": 0.7889854597440548
+        },
+        {
+          "chunk": "Here, we show that an inhibitory MHC I receptor, Ly49Q, was crucial for the swift polarization of and tissue infiltration by neutrophils.",
+          "label": "contradiction",
+          "probability": 0.89208984375,
+          "all_probs": {
+            "entailment": 0.0168609619140625,
+            "neutral": 0.09112548828125,
+            "contradiction": 0.89208984375
+          },
+          "retrieval_score": 0.7750869989395142
+        },
+        {
+          "chunk": "Ly49Q-dependent polarization and migration were affected by Ly49Q regulation of membrane raft functions.",
+          "label": "neutral",
+          "probability": 0.9951171875,
+          "all_probs": {
+            "entailment": 0.0029087066650390625,
+            "neutral": 0.9951171875,
+            "contradiction": 0.0019140243530273438
+          },
+          "retrieval_score": 0.6388964091932657
+        }
+      ]
+    },
+    "llama": {
+      "verdict": "SUPPORTED"
+    },
+    "hybrid": {
+      "llama": {
+        "verdict": "SUPPORTED",
+        "agreement": true,
+        "nli_verdict": "SUPPORTED",
+        "llm_verdict": "SUPPORTED"
+      }
+    }
+  },
+  {
+    "id": "scifact_77_5531479",
+    "source": "SciFact",
+    "claim": "Active Ly49Q prevents neutrophil polarization.",
+    "gold_label": "CONTRADICTED",
+    "retrieved_evidence": [
+      {
+        "sentence_index": 3,
+        "sentence": "However, in the presence of inflammatory stimuli, Ly49Q mediated rapid neutrophil polarization and tissue infiltration in an ITIM-domain-dependent manner.",
+        "relevance_score": 0.9999999761581421
+      },
+      {
+        "sentence_index": 2,
+        "sentence": "During the steady state, Ly49Q inhibited neutrophil adhesion by preventing focal-complex formation, likely by inhibiting Src and PI3 kinases.",
+        "relevance_score": 0.919806158542633
+      },
+      {
+        "sentence_index": 1,
+        "sentence": "Here, we show that an inhibitory MHC I receptor, Ly49Q, was crucial for the swift polarization of and tissue infiltration by neutrophils.",
+        "relevance_score": 0.7916575074195862
+      },
+      {
+        "sentence_index": 6,
+        "sentence": "We propose that Ly49Q is pivotal in switching neutrophils to their polarized morphology and rapid migration upon inflammation, through its spatiotemporal regulation of membrane rafts and raft-associated signaling molecules.",
+        "relevance_score": 0.778051345287878
+      },
+      {
+        "sentence_index": 5,
+        "sentence": "Ly49Q-dependent polarization and migration were affected by Ly49Q regulation of membrane raft functions.",
+        "relevance_score": 0.6286695634519938
+      }
+    ],
+    "nli": {
+      "claim": "Active Ly49Q prevents neutrophil polarization.",
+      "verdict": "CONTRADICTED",
+      "support_score": 0.034297294040489694,
+      "contradiction_score": 2.970382624992104,
+      "neutral_score": 1.1135731723662914,
+      "support_ratio": 0.008328117111626962,
+      "contradiction_ratio": 0.7212724810905506,
+      "neutral_ratio": 0.2703994017978224,
+      "support_vs_contradiction": 0.01141462484015012,
+      "contradiction_vs_support": 0.9885853751598499,
+      "evidence": [
+        {
+          "chunk": "However, in the presence of inflammatory stimuli, Ly49Q mediated rapid neutrophil polarization and tissue infiltration in an ITIM-domain-dependent manner.",
+          "label": "contradiction",
+          "probability": 0.9970703125,
+          "all_probs": {
+            "entailment": 0.00106048583984375,
+            "neutral": 0.0020599365234375,
+            "contradiction": 0.9970703125
+          },
+          "retrieval_score": 0.9999999761581421
+        },
+        {
+          "chunk": "During the steady state, Ly49Q inhibited neutrophil adhesion by preventing focal-complex formation, likely by inhibiting Src and PI3 kinases.",
+          "label": "neutral",
+          "probability": 0.52880859375,
+          "all_probs": {
+            "entailment": 0.0299835205078125,
+            "neutral": 0.52880859375,
+            "contradiction": 0.441162109375
+          },
+          "retrieval_score": 0.919806158542633
+        },
+        {
+          "chunk": "Here, we show that an inhibitory MHC I receptor, Ly49Q, was crucial for the swift polarization of and tissue infiltration by neutrophils.",
+          "label": "contradiction",
+          "probability": 0.9931640625,
+          "all_probs": {
+            "entailment": 0.0019588470458984375,
+            "neutral": 0.004718780517578125,
+            "contradiction": 0.9931640625
+          },
+          "retrieval_score": 0.7916575074195862
+        },
+        {
+          "chunk": "We propose that Ly49Q is pivotal in switching neutrophils to their polarized morphology and rapid migration upon inflammation, through its spatiotemporal regulation of membrane rafts and raft-associated signaling molecules.",
+          "label": "contradiction",
+          "probability": 0.9970703125,
+          "all_probs": {
+            "entailment": 0.0010004043579101562,
+            "neutral": 0.00206756591796875,
+            "contradiction": 0.9970703125
+          },
+          "retrieval_score": 0.778051345287878
+        },
+        {
+          "chunk": "Ly49Q-dependent polarization and migration were affected by Ly49Q regulation of membrane raft functions.",
+          "label": "neutral",
+          "probability": 0.98583984375,
+          "all_probs": {
+            "entailment": 0.0052947998046875,
+            "neutral": 0.98583984375,
+            "contradiction": 0.00876617431640625
+          },
+          "retrieval_score": 0.6286695634519938
+        }
+      ]
+    },
+    "llama": {
+      "verdict": "CONTRADICTED"
+    },
+    "hybrid": {
+      "llama": {
+        "verdict": "CONTRADICTED",
+        "agreement": true,
+        "nli_verdict": "CONTRADICTED",
+        "llm_verdict": "CONTRADICTED"
+      }
+    }
+  },
+  {
+    "id": "scifact_78_5099266",
+    "source": "SciFact",
+    "claim": "Active caspase-11 participate in regulating phagosome-lysosome fusion.",
+    "gold_label": "SUPPORTED",
+    "retrieved_evidence": [
+      {
+        "sentence_index": 7,
+        "sentence": "However, caspase-11 was dispensable for the fusion of lysosomes with phagosomes containing nonpathogenic bacteria, uncovering a fundamental difference in the trafficking of phagosomes according to their cargo.",
+        "relevance_score": 0.9130090225096906
+      },
+      {
+        "sentence_index": 6,
+        "sentence": "Caspase-11 promoted the fusion of the L. pneumophila vacuole with lysosomes by modulating actin polymerization through cofilin.",
+        "relevance_score": 0.6237601869011437
+      },
+      {
+        "sentence_index": 4,
+        "sentence": "We also determined that active mouse caspase-11 was required for restriction of L. pneumophila infection.",
+        "relevance_score": 0.4560250997543335
+      },
+      {
+        "sentence_index": 2,
+        "sentence": "Caspase-11 mediates caspase-1 activation in response to lipopolysaccharide and bacterial toxins, and yet its role during bacterial infection is unknown.",
+        "relevance_score": 0.4557044833349685
+      },
+      {
+        "sentence_index": 5,
+        "sentence": "Similarly, human caspase-4 and caspase-5, homologs of mouse caspase-11, cooperated to restrict L. pneumophila infection in human macrophages.",
+        "relevance_score": 0.4472965896129608
+      }
+    ],
+    "nli": {
+      "claim": "Active caspase-11 participate in regulating phagosome-lysosome fusion.",
+      "verdict": "CONTRADICTED",
+      "support_score": 0.6322983475335445,
+      "contradiction_score": 0.975389345075555,
+      "neutral_score": 1.2880125121938677,
+      "support_ratio": 0.2183576692382657,
+      "contradiction_ratio": 0.3368405829642588,
+      "neutral_ratio": 0.44480174779747556,
+      "support_vs_contradiction": 0.39329675187560476,
+      "contradiction_vs_support": 0.6067032481243952,
+      "evidence": [
+        {
+          "chunk": "However, caspase-11 was dispensable for the fusion of lysosomes with phagosomes containing nonpathogenic bacteria, uncovering a fundamental difference in the trafficking of phagosomes according to their cargo.",
+          "label": "contradiction",
+          "probability": 0.9873046875,
+          "all_probs": {
+            "entailment": 0.002490997314453125,
+            "neutral": 0.0101318359375,
+            "contradiction": 0.9873046875
+          },
+          "retrieval_score": 0.9130090225096906
+        },
+        {
+          "chunk": "Caspase-11 promoted the fusion of the L. pneumophila vacuole with lysosomes by modulating actin polymerization through cofilin.",
+          "label": "entailment",
+          "probability": 0.97607421875,
+          "all_probs": {
+            "entailment": 0.97607421875,
+            "neutral": 0.021270751953125,
+            "contradiction": 0.002429962158203125
+          },
+          "retrieval_score": 0.6237601869011437
+        },
+        {
+          "chunk": "We also determined that active mouse caspase-11 was required for restriction of L. pneumophila infection.",
+          "label": "neutral",
+          "probability": 0.99560546875,
+          "all_probs": {
+            "entailment": 0.003337860107421875,
+            "neutral": 0.99560546875,
+            "contradiction": 0.0011034011840820312
+          },
+          "retrieval_score": 0.4560250997543335
+        },
+        {
+          "chunk": "Caspase-11 mediates caspase-1 activation in response to lipopolysaccharide and bacterial toxins, and yet its role during bacterial infection is unknown.",
+          "label": "neutral",
+          "probability": 0.84228515625,
+          "all_probs": {
+            "entailment": 0.01041412353515625,
+            "neutral": 0.84228515625,
+            "contradiction": 0.1474609375
+          },
+          "retrieval_score": 0.4557044833349685
+        },
+        {
+          "chunk": "Similarly, human caspase-4 and caspase-5, homologs of mouse caspase-11, cooperated to restrict L. pneumophila infection in human macrophages.",
+          "label": "neutral",
+          "probability": 0.9560546875,
+          "all_probs": {
+            "entailment": 0.033355712890625,
+            "neutral": 0.9560546875,
+            "contradiction": 0.01062774658203125
+          },
+          "retrieval_score": 0.4472965896129608
+        }
+      ]
+    },
+    "llama": {
+      "verdict": "SUPPORTED"
+    },
+    "hybrid": {
+      "llama": {
+        "verdict": "NOT ENOUGH EVIDENCE",
+        "agreement": false,
+        "nli_verdict": "CONTRADICTED",
+        "llm_verdict": "SUPPORTED"
+      }
+    }
+  },
+  {
+    "id": "scifact_79_5099266",
+    "source": "SciFact",
+    "claim": "Active caspase-11 protein promotes pyroptosis.",
+    "gold_label": "SUPPORTED",
+    "retrieved_evidence": [
+      {
+        "sentence_index": 2,
+        "sentence": "Caspase-11 mediates caspase-1 activation in response to lipopolysaccharide and bacterial toxins, and yet its role during bacterial infection is unknown.",
+        "relevance_score": 0.9151308863806228
+      },
+      {
+        "sentence_index": 5,
+        "sentence": "Similarly, human caspase-4 and caspase-5, homologs of mouse caspase-11, cooperated to restrict L. pneumophila infection in human macrophages.",
+        "relevance_score": 0.7846036553382874
+      },
+      {
+        "sentence_index": 4,
+        "sentence": "We also determined that active mouse caspase-11 was required for restriction of L. pneumophila infection.",
+        "relevance_score": 0.7785815358161926
+      },
+      {
+        "sentence_index": 6,
+        "sentence": "Caspase-11 promoted the fusion of the L. pneumophila vacuole with lysosomes by modulating actin polymerization through cofilin.",
+        "relevance_score": 0.6981232397461449
+      },
+      {
+        "sentence_index": 7,
+        "sentence": "However, caspase-11 was dispensable for the fusion of lysosomes with phagosomes containing nonpathogenic bacteria, uncovering a fundamental difference in the trafficking of phagosomes according to their cargo.",
+        "relevance_score": 0.5893455493804182
+      }
+    ],
+    "nli": {
+      "claim": "Active caspase-11 protein promotes pyroptosis.",
+      "verdict": "CONTRADICTED",
+      "support_score": 0.034521850683335166,
+      "contradiction_score": 0.7149509271187047,
+      "neutral_score": 3.0164979684956177,
+      "support_ratio": 0.009166786735471524,
+      "contradiction_ratio": 0.1898450559717109,
+      "neutral_ratio": 0.8009881572928176,
+      "support_vs_contradiction": 0.046061513781162994,
+      "contradiction_vs_support": 0.953938486218837,
+      "evidence": [
+        {
+          "chunk": "Caspase-11 mediates caspase-1 activation in response to lipopolysaccharide and bacterial toxins, and yet its role during bacterial infection is unknown.",
+          "label": "neutral",
+          "probability": 0.97607421875,
+          "all_probs": {
+            "entailment": 0.01390838623046875,
+            "neutral": 0.97607421875,
+            "contradiction": 0.009979248046875
+          },
+          "retrieval_score": 0.9151308863806228
+        },
+        {
+          "chunk": "Similarly, human caspase-4 and caspase-5, homologs of mouse caspase-11, cooperated to restrict L. pneumophila infection in human macrophages.",
+          "label": "neutral",
+          "probability": 0.9765625,
+          "all_probs": {
+            "entailment": 0.0166015625,
+            "neutral": 0.9765625,
+            "contradiction": 0.006870269775390625
+          },
+          "retrieval_score": 0.7846036553382874
+        },
+        {
+          "chunk": "We also determined that active mouse caspase-11 was required for restriction of L. pneumophila infection.",
+          "label": "neutral",
+          "probability": 0.9775390625,
+          "all_probs": {
+            "entailment": 0.005962371826171875,
+            "neutral": 0.9775390625,
+            "contradiction": 0.0167083740234375
+          },
+          "retrieval_score": 0.7785815358161926
+        },
+        {
+          "chunk": "Caspase-11 promoted the fusion of the L. pneumophila vacuole with lysosomes by modulating actin polymerization through cofilin.",
+          "label": "contradiction",
+          "probability": 0.97021484375,
+          "all_probs": {
+            "entailment": 0.0012922286987304688,
+            "neutral": 0.0284271240234375,
+            "contradiction": 0.97021484375
+          },
+          "retrieval_score": 0.6981232397461449
+        },
+        {
+          "chunk": "However, caspase-11 was dispensable for the fusion of lysosomes with phagosomes containing nonpathogenic bacteria, uncovering a fundamental difference in the trafficking of phagosomes according to their cargo.",
+          "label": "neutral",
+          "probability": 0.9775390625,
+          "all_probs": {
+            "entailment": 0.00547027587890625,
+            "neutral": 0.9775390625,
+            "contradiction": 0.017120361328125
+          },
+          "retrieval_score": 0.5893455493804182
+        }
+      ]
+    },
+    "llama": {
+      "verdict": "SUPPORTED"
+    },
+    "hybrid": {
+      "llama": {
+        "verdict": "NOT ENOUGH EVIDENCE",
+        "agreement": false,
+        "nli_verdict": "CONTRADICTED",
+        "llm_verdict": "SUPPORTED"
+      }
+    }
+  },
+  {
+    "id": "scifact_93_2692522",
+    "source": "SciFact",
+    "claim": "Aggravated inflammation is dependent on NLRP3 inflammasome activation.",
+    "gold_label": "SUPPORTED",
+    "retrieved_evidence": [
+      {
+        "sentence_index": 3,
+        "sentence": "Macrophages from mice deficient in various components of the inflammasome such as caspase-1, ASC and NALP3 are defective in crystal-induced IL-1β activation.",
+        "relevance_score": 0.9963123559951782
+      },
+      {
+        "sentence_index": 5,
+        "sentence": "These findings provide insight into the molecular processes underlying the inflammatory conditions of gout and pseudogout, and further support a pivotal role of the inflammasome in several autoinflammatory diseases.",
+        "relevance_score": 0.9180701785792712
+      },
+      {
+        "sentence_index": 2,
+        "sentence": "Here we show that MSU and CPPD engage the caspase-1-activating NALP3 (also called cryopyrin) inflammasome, resulting in the production of active interleukin (IL)-1β and IL-18.",
+        "relevance_score": 0.8999999761581421
+      },
+      {
+        "sentence_index": 4,
+        "sentence": "Moreover, an impaired neutrophil influx is found in an in vivo model of crystal-induced peritonitis in inflammasome-deficient mice or mice deficient in the IL-1β receptor (IL-1R).",
+        "relevance_score": 0.5737530893651004
+      },
+      {
+        "sentence_index": 1,
+        "sentence": "Although MSU crystals were first identified as the aetiological agent of gout in the eighteenth century and more recently as a ‘danger signal’ released from dying cells, little is known about the molecular mechanisms underlying MSU- or CPPD-induced inflammation.",
+        "relevance_score": 0.08375450692511402
+      }
+    ],
+    "nli": {
+      "claim": "Aggravated inflammation is dependent on NLRP3 inflammasome activation.",
+      "verdict": "SUPPORTED",
+      "support_score": 0.368018825204817,
+      "contradiction_score": 0.026046359440813825,
+      "neutral_score": 3.0781064583202062,
+      "support_ratio": 0.10599096561092385,
+      "contradiction_ratio": 0.007501460791427268,
+      "neutral_ratio": 0.8865075735976489,
+      "support_vs_contradiction": 0.9339034239621132,
+      "contradiction_vs_support": 0.06609657603788675,
+      "evidence": [
+        {
+          "chunk": "Macrophages from mice deficient in various components of the inflammasome such as caspase-1, ASC and NALP3 are defective in crystal-induced IL-1β activation.",
+          "label": "neutral",
+          "probability": 0.89111328125,
+          "all_probs": {
+            "entailment": 0.103515625,
+            "neutral": 0.89111328125,
+            "contradiction": 0.005596160888671875
+          },
+          "retrieval_score": 0.9963123559951782
+        },
+        {
+          "chunk": "These findings provide insight into the molecular processes underlying the inflammatory conditions of gout and pseudogout, and further support a pivotal role of the inflammasome in several autoinflammatory diseases.",
+          "label": "neutral",
+          "probability": 0.9765625,
+          "all_probs": {
+            "entailment": 0.020751953125,
+            "neutral": 0.9765625,
+            "contradiction": 0.002796173095703125
+          },
+          "retrieval_score": 0.9180701785792712
+        },
+        {
+          "chunk": "Here we show that MSU and CPPD engage the caspase-1-activating NALP3 (also called cryopyrin) inflammasome, resulting in the production of active interleukin (IL)-1β and IL-18.",
+          "label": "neutral",
+          "probability": 0.84228515625,
+          "all_probs": {
+            "entailment": 0.1552734375,
+            "neutral": 0.84228515625,
+            "contradiction": 0.0025272369384765625
+          },
+          "retrieval_score": 0.8999999761581421
+        },
+        {
+          "chunk": "Moreover, an impaired neutrophil influx is found in an in vivo model of crystal-induced peritonitis in inflammasome-deficient mice or mice deficient in the IL-1β receptor (IL-1R).",
+          "label": "neutral",
+          "probability": 0.78857421875,
+          "all_probs": {
+            "entailment": 0.1845703125,
+            "neutral": 0.78857421875,
+            "contradiction": 0.02667236328125
+          },
+          "retrieval_score": 0.5737530893651004
+        },
+        {
+          "chunk": "Although MSU crystals were first identified as the aetiological agent of gout in the eighteenth century and more recently as a ‘danger signal’ released from dying cells, little is known about the molecular mechanisms underlying MSU- or CPPD-induced inflammation.",
+          "label": "neutral",
+          "probability": 0.99365234375,
+          "all_probs": {
+            "entailment": 0.0022602081298828125,
+            "neutral": 0.99365234375,
+            "contradiction": 0.0038909912109375
+          },
+          "retrieval_score": 0.08375450692511402
+        }
+      ]
+    },
+    "llama": {
+      "verdict": "SUPPORTED"
+    },
+    "hybrid": {
+      "llama": {
+        "verdict": "SUPPORTED",
+        "agreement": true,
+        "nli_verdict": "SUPPORTED",
+        "llm_verdict": "SUPPORTED"
+      }
+    }
+  },
+  {
+    "id": "scifact_98_6540064",
+    "source": "SciFact",
+    "claim": "Alirocumab treatment reduces apo(a) fractional clearance rate.",
+    "gold_label": "CONTRADICTED",
+    "retrieved_evidence": [
+      {
+        "sentence_index": 16,
+        "sentence": "The increase in apo(a) FCR during alirocumab treatment suggests that increased LDL receptors may also play a role in the reduction of plasma Lp(a).   ",
+        "relevance_score": 0.9766158123244004
+      },
+      {
+        "sentence_index": 7,
+        "sentence": "At the end of each period, fractional clearance rates (FCRs) and production rates (PRs) of apoB and apo(a) were determined.",
+        "relevance_score": 0.9556270003318786
+      },
+      {
+        "sentence_index": 14,
+        "sentence": "CONCLUSIONS Alirocumab decreased LDL-C and LDL-apoB by increasing IDL- and LDL-apoB FCRs and decreasing LDL-apoB PR.",
+        "relevance_score": 0.8525490839449077
+      },
+      {
+        "sentence_index": 9,
+        "sentence": "RESULTS Alirocumab reduced ultracentrifugally isolated LDL-C by 55.1%, LDL-apoB by 56.3%, and plasma Lp(a) by 18.7%.",
+        "relevance_score": 0.7933251936403423
+      },
+      {
+        "sentence_index": 13,
+        "sentence": "Alirocumab had no effects on FCRs or PRs of very low-density lipoproteins-apoB and very low-density lipoproteins triglycerides or on postprandial plasma triglycerides or apoB48 concentrations.   \n",
+        "relevance_score": 0.7543579590924859
+      }
+    ],
+    "nli": {
+      "claim": "Alirocumab treatment reduces apo(a) fractional clearance rate.",
+      "verdict": "CONTRADICTED",
+      "support_score": 1.2357272723221415,
+      "contradiction_score": 1.6119226838010807,
+      "neutral_score": 1.4849566421655436,
+      "support_ratio": 0.2852156650479673,
+      "contradiction_ratio": 0.3720445526805356,
+      "neutral_ratio": 0.3427397822714972,
+      "support_vs_contradiction": 0.4339463386870959,
+      "contradiction_vs_support": 0.5660536613129041,
+      "evidence": [
+        {
+          "chunk": "The increase in apo(a) FCR during alirocumab treatment suggests that increased LDL receptors may also play a role in the reduction of plasma Lp(a).   ",
+          "label": "contradiction",
+          "probability": 0.96142578125,
+          "all_probs": {
+            "entailment": 0.01995849609375,
+            "neutral": 0.018585205078125,
+            "contradiction": 0.96142578125
+          },
+          "retrieval_score": 0.9766158123244004
+        },
+        {
+          "chunk": "At the end of each period, fractional clearance rates (FCRs) and production rates (PRs) of apoB and apo(a) were determined.",
+          "label": "neutral",
+          "probability": 0.9990234375,
+          "all_probs": {
+            "entailment": 0.0005812644958496094,
+            "neutral": 0.9990234375,
+            "contradiction": 0.0005812644958496094
+          },
+          "retrieval_score": 0.9556270003318786
+        },
+        {
+          "chunk": "CONCLUSIONS Alirocumab decreased LDL-C and LDL-apoB by increasing IDL- and LDL-apoB FCRs and decreasing LDL-apoB PR.",
+          "label": "entailment",
+          "probability": 0.73779296875,
+          "all_probs": {
+            "entailment": 0.73779296875,
+            "neutral": 0.18115234375,
+            "contradiction": 0.0809326171875
+          },
+          "retrieval_score": 0.8525490839449077
+        },
+        {
+          "chunk": "RESULTS Alirocumab reduced ultracentrifugally isolated LDL-C by 55.1%, LDL-apoB by 56.3%, and plasma Lp(a) by 18.7%.",
+          "label": "entailment",
+          "probability": 0.72705078125,
+          "all_probs": {
+            "entailment": 0.72705078125,
+            "neutral": 0.1917724609375,
+            "contradiction": 0.08135986328125
+          },
+          "retrieval_score": 0.7933251936403423
+        },
+        {
+          "chunk": "Alirocumab had no effects on FCRs or PRs of very low-density lipoproteins-apoB and very low-density lipoproteins triglycerides or on postprandial plasma triglycerides or apoB48 concentrations.   \n",
+          "label": "contradiction",
+          "probability": 0.71435546875,
+          "all_probs": {
+            "entailment": 0.0131072998046875,
+            "neutral": 0.2724609375,
+            "contradiction": 0.71435546875
+          },
+          "retrieval_score": 0.7543579590924859
+        }
+      ]
+    },
+    "llama": {
+      "verdict": "NOT ENOUGH EVIDENCE"
+    },
+    "hybrid": {
+      "llama": {
+        "verdict": "NOT ENOUGH EVIDENCE",
+        "agreement": false,
+        "nli_verdict": "CONTRADICTED",
+        "llm_verdict": "NOT ENOUGH EVIDENCE"
+      }
+    }
+  },
+  {
+    "id": "scifact_104_40164383",
+    "source": "SciFact",
+    "claim": "Allogeneic mechanical circulatory support is not as effective as autologous mechanical circulatory support for treating acute myocardial infarction.",
+    "gold_label": "CONTRADICTED",
+    "retrieved_evidence": [
+      {
+        "sentence_index": 2,
+        "sentence": "OBJECTIVE To test whether allogeneic MSCs are as safe and effective as autologous MSCs in patients with left ventricular (LV) dysfunction due to ICM.   \n",
+        "relevance_score": 0.9999999761581421
+      },
+      {
+        "sentence_index": 15,
+        "sentence": "CONCLUSIONS In this early-stage study of patients with ICM, transendocardial injection of allogeneic and autologous MSCs without a placebo control were both associated with low rates of treatment-emergent SAEs, including immunologic reactions.",
+        "relevance_score": 0.7864898072712201
+      },
+      {
+        "sentence_index": 9,
+        "sentence": "At 1 year, there were no ventricular arrhythmia SAEs observed among allogeneic recipients compared with 4 patients (26.7%) in the autologous group (P = .10).",
+        "relevance_score": 0.7788854809628495
+      },
+      {
+        "sentence_index": 1,
+        "sentence": "Both autologous and allogeneic MSC therapies are possible; however, their safety and efficacy have not been compared.   \n",
+        "relevance_score": 0.7721446874698592
+      },
+      {
+        "sentence_index": 16,
+        "sentence": "In aggregate, MSC injection favorably affected patient functional capacity, quality of life, and ventricular remodeling.   \n",
+        "relevance_score": 0.6424397230148315
+      }
+    ],
+    "nli": {
+      "claim": "Allogeneic mechanical circulatory support is not as effective as autologous mechanical circulatory support for treating acute myocardial infarction.",
+      "verdict": "CONTRADICTED",
+      "support_score": 0.030610422255703332,
+      "contradiction_score": 0.033384829250761,
+      "neutral_score": 3.9159423004614466,
+      "support_ratio": 0.007691181546446067,
+      "contradiction_ratio": 0.008388279668924355,
+      "neutral_ratio": 0.9839205387846296,
+      "support_vs_contradiction": 0.47832333704651964,
+      "contradiction_vs_support": 0.5216766629534804,
+      "evidence": [
+        {
+          "chunk": "OBJECTIVE To test whether allogeneic MSCs are as safe and effective as autologous MSCs in patients with left ventricular (LV) dysfunction due to ICM.   \n",
+          "label": "neutral",
+          "probability": 0.97802734375,
+          "all_probs": {
+            "entailment": 0.00830841064453125,
+            "neutral": 0.97802734375,
+            "contradiction": 0.0134429931640625
+          },
+          "retrieval_score": 0.9999999761581421
+        },
+        {
+          "chunk": "CONCLUSIONS In this early-stage study of patients with ICM, transendocardial injection of allogeneic and autologous MSCs without a placebo control were both associated with low rates of treatment-emergent SAEs, including immunologic reactions.",
+          "label": "neutral",
+          "probability": 0.97900390625,
+          "all_probs": {
+            "entailment": 0.0108795166015625,
+            "neutral": 0.97900390625,
+            "contradiction": 0.01001739501953125
+          },
+          "retrieval_score": 0.7864898072712201
+        },
+        {
+          "chunk": "At 1 year, there were no ventricular arrhythmia SAEs observed among allogeneic recipients compared with 4 patients (26.7%) in the autologous group (P = .10).",
+          "label": "neutral",
+          "probability": 0.9853515625,
+          "all_probs": {
+            "entailment": 0.01197052001953125,
+            "neutral": 0.9853515625,
+            "contradiction": 0.00279998779296875
+          },
+          "retrieval_score": 0.7788854809628495
+        },
+        {
+          "chunk": "Both autologous and allogeneic MSC therapies are possible; however, their safety and efficacy have not been compared.   \n",
+          "label": "neutral",
+          "probability": 0.9951171875,
+          "all_probs": {
+            "entailment": 0.0021305084228515625,
+            "neutral": 0.9951171875,
+            "contradiction": 0.0029277801513671875
+          },
+          "retrieval_score": 0.7721446874698592
+        },
+        {
+          "chunk": "In aggregate, MSC injection favorably affected patient functional capacity, quality of life, and ventricular remodeling.   \n",
+          "label": "neutral",
+          "probability": 0.98388671875,
+          "all_probs": {
+            "entailment": 0.004322052001953125,
+            "neutral": 0.98388671875,
+            "contradiction": 0.01186370849609375
+          },
+          "retrieval_score": 0.6424397230148315
+        }
+      ]
+    },
+    "llama": {
+      "verdict": "NOT ENOUGH EVIDENCE"
+    },
+    "hybrid": {
+      "llama": {
+        "verdict": "NOT ENOUGH EVIDENCE",
+        "agreement": false,
+        "nli_verdict": "CONTRADICTED",
+        "llm_verdict": "NOT ENOUGH EVIDENCE"
+      }
+    }
+  },
+  {
+    "id": "scifact_105_36606083",
+    "source": "SciFact",
+    "claim": "Alteration of origin firing causes changes in termination zones of Okazaki fragments.",
+    "gold_label": "CONTRADICTED",
+    "retrieved_evidence": [
+      {
+        "sentence_index": 1,
+        "sentence": "Via the deep sequencing of Okazaki fragments, we comprehensively document replication fork directionality throughout the S. cerevisiae genome, which permits the systematic analysis of initiation, origin efficiency, fork progression, and termination.",
+        "relevance_score": 0.9999999761581421
+      },
+      {
+        "sentence_index": 3,
+        "sentence": "Using a strain in which late origins can be induced to fire early, we show that replication termination is a largely passive phenomenon that does not rely on cis-acting sequences or replication fork pausing.",
+        "relevance_score": 0.5517861302869255
+      },
+      {
+        "sentence_index": 4,
+        "sentence": "The replication profile is predominantly determined by the kinetics of origin firing, allowing us to reconstruct chromosome-wide timing profiles from an asynchronous culture.",
+        "relevance_score": 0.26263388582398134
+      },
+      {
+        "sentence_index": 0,
+        "sentence": "Many fundamental aspects of DNA replication, such as the exact locations where DNA synthesis is initiated and terminated, how frequently origins are used, and how fork progression is influenced by transcription, are poorly understood.",
+        "relevance_score": 0.0444958429248465
+      },
+      {
+        "sentence_index": 2,
+        "sentence": "We show that leading-strand initiation preferentially occurs within a nucleosome-free region at replication origins.",
+        "relevance_score": 0.0
+      }
+    ],
+    "nli": {
+      "claim": "Alteration of origin firing causes changes in termination zones of Okazaki fragments.",
+      "verdict": "CONTRADICTED",
+      "support_score": 0.024068880961661925,
+      "contradiction_score": 0.09685096691396376,
+      "neutral_score": 1.7379478508774115,
+      "support_ratio": 0.012948140945053687,
+      "contradiction_ratio": 0.05210213022633788,
+      "neutral_ratio": 0.9349497288286084,
+      "support_vs_contradiction": 0.19904822396417843,
+      "contradiction_vs_support": 0.8009517760358217,
+      "evidence": [
+        {
+          "chunk": "Via the deep sequencing of Okazaki fragments, we comprehensively document replication fork directionality throughout the S. cerevisiae genome, which permits the systematic analysis of initiation, origin efficiency, fork progression, and termination.",
+          "label": "neutral",
+          "probability": 0.98974609375,
+          "all_probs": {
+            "entailment": 0.006603240966796875,
+            "neutral": 0.98974609375,
+            "contradiction": 0.0036754608154296875
+          },
+          "retrieval_score": 0.9999999761581421
+        },
+        {
+          "chunk": "Using a strain in which late origins can be induced to fire early, we show that replication termination is a largely passive phenomenon that does not rely on cis-acting sequences or replication fork pausing.",
+          "label": "neutral",
+          "probability": 0.8076171875,
+          "all_probs": {
+            "entailment": 0.0272674560546875,
+            "neutral": 0.8076171875,
+            "contradiction": 0.1649169921875
+          },
+          "retrieval_score": 0.5517861302869255
+        },
+        {
+          "chunk": "The replication profile is predominantly determined by the kinetics of origin firing, allowing us to reconstruct chromosome-wide timing profiles from an asynchronous culture.",
+          "label": "neutral",
+          "probability": 0.984375,
+          "all_probs": {
+            "entailment": 0.00827789306640625,
+            "neutral": 0.984375,
+            "contradiction": 0.007457733154296875
+          },
+          "retrieval_score": 0.26263388582398134
+        },
+        {
+          "chunk": "Many fundamental aspects of DNA replication, such as the exact locations where DNA synthesis is initiated and terminated, how frequently origins are used, and how fork progression is influenced by transcription, are poorly understood.",
+          "label": "neutral",
+          "probability": 0.98974609375,
+          "all_probs": {
+            "entailment": 0.005523681640625,
+            "neutral": 0.98974609375,
+            "contradiction": 0.0048980712890625
+          },
+          "retrieval_score": 0.0444958429248465
+        },
+        {
+          "chunk": "We show that leading-strand initiation preferentially occurs within a nucleosome-free region at replication origins.",
+          "label": "neutral",
+          "probability": 0.9482421875,
+          "all_probs": {
+            "entailment": 0.02581787109375,
+            "neutral": 0.9482421875,
+            "contradiction": 0.0258636474609375
+          },
+          "retrieval_score": 0.0
+        }
+      ]
+    },
+    "llama": {
+      "verdict": "NOT ENOUGH EVIDENCE"
+    },
+    "hybrid": {
+      "llama": {
+        "verdict": "NOT ENOUGH EVIDENCE",
+        "agreement": false,
+        "nli_verdict": "CONTRADICTED",
+        "llm_verdict": "NOT ENOUGH EVIDENCE"
+      }
+    }
+  }
+]

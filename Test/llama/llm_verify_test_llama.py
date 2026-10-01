@@ -1,5 +1,6 @@
 import json
 import requests
+import time
 
 
 # ============================================================
@@ -61,7 +62,12 @@ Return ONLY valid JSON in exactly this format:
 # ============================================================
 
 def call_llm(prompt: str) -> dict:
-    """Send claim + retrieved evidence to Ollama."""
+    """Send claim + retrieved evidence to Ollama.
+
+    Retry until Ollama returns a valid verdict. This prevents a single
+    timeout, connection error, or malformed Llama response from killing
+    the full overnight experiment.
+    """
 
     payload = {
         "model": MODEL_NAME,
@@ -84,36 +90,9 @@ def call_llm(prompt: str) -> dict:
         }
     }
 
-    response = requests.post(
-        OLLAMA_URL,
-        json=payload,
-        timeout=120
-    )
-
-    response.raise_for_status()
-
-    data = response.json()
-
-    content = data["message"]["content"].strip()
-
-    # --------------------------------------------------------
-    # Remove markdown code fences if the model adds them
-    # --------------------------------------------------------
-
-    if content.startswith("```"):
-        content = content.replace("```json", "")
-        content = content.replace("```", "")
-        content = content.strip()
-
-    # --------------------------------------------------------
-    # Parse JSON
-    # --------------------------------------------------------
-
-    result = json.loads(content)
-
-    # --------------------------------------------------------
-    # Validate verdict
-    # --------------------------------------------------------
+    REQUEST_TIMEOUT = 300
+    RETRY_DELAY = 5
+    attempt = 0
 
     valid_verdicts = {
         "SUPPORTED",
@@ -121,16 +100,77 @@ def call_llm(prompt: str) -> dict:
         "NOT ENOUGH EVIDENCE"
     }
 
-    verdict = result.get("verdict")
+    while True:
+        attempt += 1
 
-    if verdict not in valid_verdicts:
-        raise ValueError(
-            f"Invalid LLM verdict: {verdict}"
-        )
+        try:
+            response = requests.post(
+                OLLAMA_URL,
+                json=payload,
+                timeout=REQUEST_TIMEOUT
+            )
 
-    return {
-        "verdict": verdict
-    }
+            response.raise_for_status()
+
+            data = response.json()
+            content = data["message"]["content"].strip()
+
+            # Remove markdown code fences if Llama adds them.
+            if content.startswith("```"):
+                content = content.replace("```json", "")
+                content = content.replace("```", "")
+                content = content.strip()
+
+            # First try strict JSON parsing.
+            try:
+                result = json.loads(content)
+            except json.JSONDecodeError:
+                # Llama can occasionally return extra text or more than
+                # one JSON object. Extract a valid verdict object.
+                import re
+
+                matches = re.findall(
+                    r'\{\s*"verdict"\s*:\s*'
+                    r'"(SUPPORTED|CONTRADICTED|NOT ENOUGH EVIDENCE)"\s*\}',
+                    content
+                )
+
+                if not matches:
+                    raise ValueError(
+                        "No valid verdict JSON found in Llama response"
+                    )
+
+                result = {"verdict": matches[0]}
+
+            verdict = result.get("verdict")
+
+            if verdict not in valid_verdicts:
+                raise ValueError(
+                    f"Invalid Llama verdict: {verdict}"
+                )
+
+            return {
+                "verdict": verdict
+            }
+
+        except (
+            requests.exceptions.Timeout,
+            requests.exceptions.RequestException,
+            json.JSONDecodeError,
+            ValueError,
+            KeyError,
+            TypeError
+        ) as exc:
+
+            print(
+                f"        Llama attempt {attempt} failed: "
+                f"{type(exc).__name__}: {exc}"
+            )
+            print(
+                f"        Retrying Llama in {RETRY_DELAY} seconds..."
+            )
+
+            time.sleep(RETRY_DELAY)
 
 
 # ============================================================

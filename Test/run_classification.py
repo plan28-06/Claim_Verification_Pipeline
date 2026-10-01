@@ -1,5 +1,7 @@
 import json
+import os
 import sys
+import tempfile
 from pathlib import Path
 
 
@@ -15,7 +17,7 @@ RESULTS_DIR = TEST_DIR / "results"
 
 OUTPUT_FILE = (
     RESULTS_DIR
-    / "qwen_results.json"
+    / "llama_results.json"
 )
 
 # ============================================================
@@ -29,13 +31,13 @@ sys.path.insert(
 
 from nli_verify import verify_claim_test
 
-# from llama.llm_verify_test_llama import (
-#     verify_claim_with_llm as verify_llama
-# )
-
-from qwen.llm_verify_test_qwen import (
-    verify_claim_with_llm as verify_qwen
+from llama.llm_verify_test_llama import (
+    verify_claim_with_llm as verify_llama
 )
+
+# from qwen.llm_verify_test_qwen import (
+#     verify_claim_with_llm as verify_qwen
+# )
 
 # from mistral.llm_verify_test_mistral import (
 #     verify_claim_with_llm as verify_mistral
@@ -82,24 +84,103 @@ def load_cache():
 # SAVE RESULTS
 # ============================================================
 
+def load_existing_results():
+    """
+    Load previously completed results so the experiment can resume
+    after a restart/interruption.
+
+    If no results file exists, start with an empty list.
+    If the existing file is invalid JSON, stop instead of overwriting
+    the previous checkpoint.
+    """
+
+    if not OUTPUT_FILE.exists():
+        return []
+
+    try:
+        with OUTPUT_FILE.open(
+            "r",
+            encoding="utf-8"
+        ) as f:
+
+            data = json.load(f)
+
+    except json.JSONDecodeError as e:
+
+        raise RuntimeError(
+            f"Existing results file is corrupted and was not overwritten:\n"
+            f"{OUTPUT_FILE}\n"
+            f"JSON error: {e}"
+        ) from e
+
+    if not isinstance(data, list):
+
+        raise RuntimeError(
+            f"Existing results file does not contain a JSON list:\n"
+            f"{OUTPUT_FILE}"
+        )
+
+    return data
+
+
 def save_results(results):
+    """
+    Atomically save the checkpoint.
+
+    The new JSON is first written to a temporary file in the same
+    directory. Only after the write succeeds is it replaced over
+    llama_results.json.
+
+    This prevents an interruption during writing from destroying
+    the previous valid checkpoint.
+    """
 
     RESULTS_DIR.mkdir(
         parents=True,
         exist_ok=True
     )
 
-    with OUTPUT_FILE.open(
-        "w",
-        encoding="utf-8"
-    ) as f:
+    temp_path = None
 
-        json.dump(
-            results,
-            f,
-            indent=2,
-            ensure_ascii=False
+    try:
+
+        with tempfile.NamedTemporaryFile(
+            mode="w",
+            encoding="utf-8",
+            dir=RESULTS_DIR,
+            prefix="llama_results_",
+            suffix=".tmp",
+            delete=False
+        ) as f:
+
+            temp_path = Path(f.name)
+
+            json.dump(
+                results,
+                f,
+                indent=2,
+                ensure_ascii=False
+            )
+
+            f.flush()
+            os.fsync(f.fileno())
+
+        os.replace(
+            temp_path,
+            OUTPUT_FILE
         )
+
+        temp_path = None
+
+    finally:
+
+        if temp_path is not None and temp_path.exists():
+
+            try:
+                temp_path.unlink()
+
+            except OSError:
+                pass
 
 
 # ============================================================
@@ -258,17 +339,39 @@ def main():
     print()
 
     # --------------------------------------------------------
-    # Results
+    # Results / RESUME
     # --------------------------------------------------------
 
-    results = []
+    results = load_existing_results()
+
+    completed_ids = {
+        item["id"]
+        for item in results
+        if isinstance(item, dict) and "id" in item
+    }
+
+    pending_records = [
+        record
+        for record in records
+        if record["id"] not in completed_ids
+    ]
+
+    print(
+        f"Previously completed: {len(completed_ids)}"
+    )
+
+    print(
+        f"Remaining to run: {len(pending_records)}"
+    )
+
+    print()
 
     # --------------------------------------------------------
     # Process each claim
     # --------------------------------------------------------
 
     for i, record in enumerate(
-        records,
+        pending_records,
         start=1
     ):
 
@@ -287,7 +390,7 @@ def main():
         print("=" * 75)
 
         print(
-            f"[{i}/{len(records)}] "
+            f"[{len(completed_ids) + i}/{len(records)}] "
             f"{record_id}"
         )
 
@@ -326,35 +429,35 @@ def main():
         # 2. Llama 3.1 8B
         # ====================================================
 
-        # print(
-        #     "  [2/7] Running Llama 3.1 8B..."
-        # )
-
-        # llama_result = verify_llama(
-        #     claim,
-        #     retrieved_evidence
-        # )
-
-        # print(
-        #     f"        → {llama_result['verdict']}"
-        # )
-
-        # ====================================================
-        # 3. Qwen3 8B
-        # ====================================================
-
         print(
-            "  [3/7] Running Qwen3 8B..."
+            "  [2/7] Running Llama 3.1 8B..."
         )
 
-        qwen_result = verify_qwen(
+        llama_result = verify_llama(
             claim,
             retrieved_evidence
         )
 
         print(
-            f"        → {qwen_result['verdict']}"
+            f"        → {llama_result['verdict']}"
         )
+
+        # ====================================================
+        # 3. Qwen3 8B
+        # ====================================================
+
+        # print(
+        #     "  [3/7] Running Qwen3 8B..."
+        # )
+
+        # qwen_result = verify_qwen(
+        #     claim,
+        #     retrieved_evidence
+        # )
+
+        # print(
+        #     f"        → {qwen_result['verdict']}"
+        # )
 
         # ====================================================
         # 4. Mistral 7B
@@ -377,35 +480,35 @@ def main():
         # 5. DeBERTa + Llama
         # ====================================================
 
-        # print(
-        #     "  [5/7] Computing DeBERTa + Llama hybrid..."
-        # )
+        print(
+            "  [5/7] Computing DeBERTa + Llama hybrid..."
+        )
 
-        # hybrid_llama = combine_hybrid(
-        #     nli_result["verdict"],
-        #     llama_result["verdict"]
-        # )
+        hybrid_llama = combine_hybrid(
+            nli_result["verdict"],
+            llama_result["verdict"]
+        )
 
-        # print(
-        #     f"        → {hybrid_llama['verdict']}"
-        # )
+        print(
+            f"        → {hybrid_llama['verdict']}"
+        )
 
         # ====================================================
         # 6. DeBERTa + Qwen
         # ====================================================
 
-        print(
-            "  [6/7] Computing DeBERTa + Qwen hybrid..."
-        )
+        # print(
+        #     "  [6/7] Computing DeBERTa + Qwen hybrid..."
+        # )
 
-        hybrid_qwen = combine_hybrid(
-            nli_result["verdict"],
-            qwen_result["verdict"]
-        )
+        # hybrid_qwen = combine_hybrid(
+        #     nli_result["verdict"],
+        #     qwen_result["verdict"]
+        # )
 
-        print(
-            f"        → {hybrid_qwen['verdict']}"
-        )
+        # print(
+        #     f"        → {hybrid_qwen['verdict']}"
+        # )
 
         # ====================================================
         # 7. DeBERTa + Mistral
@@ -448,9 +551,9 @@ def main():
 
             "nli": nli_result,
 
-            # "llama": llama_result,
+            "llama": llama_result,
 
-            "qwen": qwen_result,
+            # "qwen": qwen_result,
 
             # "mistral": mistral_result,
 
@@ -460,11 +563,11 @@ def main():
 
             "hybrid": {
 
-                # "llama":
-                #     hybrid_llama
+                "llama":
+                    hybrid_llama
 
-                "qwen":
-                    hybrid_qwen
+                # "qwen":
+                #     hybrid_qwen
 
                 # "mistral":
                 #     hybrid_mistral
@@ -483,6 +586,14 @@ def main():
             results
         )
 
+        # Mark this record completed only after the checkpoint
+        # has been written successfully.
+        completed_ids.add(record_id)
+
+        print(
+            f"        Checkpoint saved ({len(completed_ids)}/{len(records)})"
+        )
+
         print()
 
     # ========================================================
@@ -498,7 +609,7 @@ def main():
     print("=" * 75)
 
     print(
-        f"Records processed: {len(results)}"
+        f"Records available in results: {len(results)}"
     )
 
     print(
